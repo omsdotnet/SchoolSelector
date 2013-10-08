@@ -1,0 +1,94 @@
+﻿<!-- STYLES START -->
+
+<style type="text/css">
+.wrapper{
+    position: relative;
+    float: left;
+    top: 0px;
+    left: 0px;
+}
+.left1{
+    position: relative;
+    float: left;
+    width: 80px;
+    text-align: left;
+    font-weight: 700;
+    font-size: large;
+    }
+
+.school{
+    }
+
+
+
+.left2{
+   position: relative;
+   float: left;
+   width: 200px;
+}
+.left3{
+   position: relative;
+   float: left;
+   width: 422px;
+    }
+
+.middle_level{
+    background-color: yellow;
+    color: black;
+    }
+
+.low_middle_level{
+    background-color: blue;
+    color: white;
+    }
+
+.high_middle_level{
+    background-color: green;
+    color: white;
+    }
+
+.low_level{
+    background-color: deepskyblue;
+    color: white;
+    }
+
+.high_level{
+    background-color: gold;
+    color: white;
+    }
+
+.no_data{
+    background-color: lightgray;
+    color: black;
+    }
+
+
+</style>
+<!-- STYLES END -->
+
+
+<!-- REPEATER START -->
+<div class="wrapper">
+	     <div class="left1">
+             <span class="school">{school_num}</span>
+	     </div>
+	     <div class="left2">
+             <p>Расстояние:<br/>
+             {distance}</p>
+	     </div>
+	     <div class="left3">
+             <p>
+                   <!-- RAITING DATA
+                   Расположение в общем рейтинге:<br/>
+                   <span class="{common_raiting_level_style}">{common_raiting_level}</span><br/>
+                   Общий рейтинг: {common_raiting}<br/>
+                   Общее место по городу: {common_level}<br/>
+                   RAITING DATA -->
+
+                   <!-- NORAITING DATA
+                   <span class="no_data">В рейтинге отсутствует</span>
+                   NORAITING DATA -->
+             </p>
+	     </div>
+</div> 
+<!-- REPEATER END -->

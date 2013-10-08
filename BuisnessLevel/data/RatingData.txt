@@ -1,0 +1,109 @@
+﻿{ school: 94, egCommonRating: "62.4", egCommomLevel: "1", egCommonState: "Самый высокий" }
+{ school: 4, egCommonRating: "62.22", egCommomLevel: "2", egCommonState: "Выше среднего" }
+{ school: 49, egCommonRating: "62.04", egCommomLevel: "3", egCommonState: "Выше среднего" }
+{ school: 58, egCommonRating: "62.04", egCommomLevel: "4", egCommonState: "Выше среднего" }
+{ school: 53, egCommonRating: "61.74", egCommomLevel: "5", egCommonState: "Выше среднего" }
+{ school: 77, egCommonRating: "61.72", egCommomLevel: "6", egCommonState: "Выше среднего" }
+{ school: 78, egCommonRating: "61.65", egCommomLevel: "7", egCommonState: "Выше среднего" }
+{ school: 95, egCommonRating: "61.35", egCommomLevel: "8", egCommonState: "Выше среднего" }
+{ school: 64, egCommonRating: "61.34", egCommomLevel: "9", egCommonState: "Выше среднего" }
+{ school: 74, egCommonRating: "60.85", egCommomLevel: "10", egCommonState: "Выше среднего" }
+{ school: 13, egCommonRating: "60.7", egCommomLevel: "11", egCommonState: "Выше среднего" }
+{ school: 161, egCommonRating: "60.69", egCommomLevel: "12", egCommonState: "Выше среднего" }
+{ school: 17, egCommonRating: "60.56", egCommomLevel: "13", egCommonState: "Выше среднего" }
+{ school: 12, egCommonRating: "60.43", egCommomLevel: "14", egCommonState: "Выше среднего" }
+{ school: 25, egCommonRating: "60.34", egCommomLevel: "15", egCommonState: "Выше среднего" }
+{ school: 109, egCommonRating: "60.25", egCommomLevel: "16", egCommonState: "Выше среднего" }
+{ school: 3, egCommonRating: "59.91", egCommomLevel: "17", egCommonState: "Выше среднего" }
+{ school: 134, egCommonRating: "59.85", egCommomLevel: "18", egCommonState: "Выше среднего" }
+{ school: 75, egCommonRating: "59.78", egCommomLevel: "19", egCommonState: "Выше среднего" }
+{ school: 160, egCommonRating: "59.7", egCommomLevel: "20", egCommonState: "Выше среднего" }
+{ school: 101, egCommonRating: "59.7", egCommomLevel: "21", egCommonState: "Выше среднего" }
+{ school: 100, egCommonRating: "59.7", egCommomLevel: "22", egCommonState: "Выше среднего" }
+{ school: 16, egCommonRating: "59.6", egCommomLevel: "23", egCommonState: "Выше среднего" }
+{ school: 11, egCommonRating: "59.57", egCommomLevel: "24", egCommonState: "Выше среднего" }
+{ school: 118, egCommonRating: "59.33", egCommomLevel: "25", egCommonState: "Выше среднего" }
+{ school: 106, egCommonRating: "59.21", egCommomLevel: "26", egCommonState: "Выше среднего" }
+{ school: 117, egCommonRating: "59.14", egCommomLevel: "27", egCommonState: "Средний" }
+{ school: 28, egCommonRating: "59.11", egCommomLevel: "28", egCommonState: "Средний" }
+{ school: 61, egCommonRating: "58.78", egCommomLevel: "29", egCommonState: "Средний" }
+{ school: 54, egCommonRating: "58.48", egCommomLevel: "30", egCommonState: "Средний" }
+{ school: 36, egCommonRating: "58.42", egCommomLevel: "31", egCommonState: "Средний" }
+{ school: 9, egCommonRating: "58.33", egCommomLevel: "32", egCommonState: "Средний" }
+{ school: 2, egCommonRating: "58.31", egCommomLevel: "33", egCommonState: "Средний" }
+{ school: 26, egCommonRating: "58.25", egCommomLevel: "34", egCommonState: "Средний" }
+{ school: 145, egCommonRating: "58.14", egCommomLevel: "35", egCommonState: "Средний" }
+{ school: 55, egCommonRating: "58.11", egCommomLevel: "36", egCommonState: "Средний" }
+{ school: 48, egCommonRating: "58.08", egCommomLevel: "37", egCommonState: "Средний" }
+{ school: 135, egCommonRating: "58", egCommomLevel: "38", egCommonState: "Средний" }
+{ school: 93, egCommonRating: "57.85", egCommomLevel: "39", egCommonState: "Средний" }
+{ school: 20, egCommonRating: "57.73", egCommomLevel: "40", egCommonState: "Средний" }
+{ school: 29, egCommonRating: "57.6", egCommomLevel: "41", egCommonState: "Средний" }
+{ school: 85, egCommonRating: "57.57", egCommomLevel: "42", egCommonState: "Средний" }
+{ school: 124, egCommonRating: "57.57", egCommomLevel: "43", egCommonState: "Средний" }
+{ school: 123, egCommonRating: "57.56", egCommomLevel: "44", egCommonState: "Средний" }
+{ school: 113, egCommonRating: "57.55", egCommomLevel: "45", egCommonState: "Средний" }
+{ school: 143, egCommonRating: "57.54", egCommomLevel: "46", egCommonState: "Средний" }
+{ school: 89, egCommonRating: "57.52", egCommomLevel: "47", egCommonState: "Средний" }
+{ school: 147, egCommonRating: "57.19", egCommomLevel: "48", egCommonState: "Средний" }
+{ school: 1, egCommonRating: "57.12", egCommomLevel: "49", egCommonState: "Средний" }
+{ school: 76, egCommonRating: "57.11", egCommomLevel: "50", egCommonState: "Средний" }
+{ school: 116, egCommonRating: "57", egCommomLevel: "51", egCommonState: "Средний" }
+{ school: 32, egCommonRating: "56.96", egCommomLevel: "52", egCommonState: "Средний" }
+{ school: 108, egCommonRating: "56.96", egCommomLevel: "53", egCommonState: "Средний" }
+{ school: 47, egCommonRating: "56.96", egCommomLevel: "54", egCommonState: "Средний" }
+{ school: 107, egCommonRating: "56.93", egCommomLevel: "55", egCommonState: "Средний" }
+{ school: 34, egCommonRating: "56.91", egCommomLevel: "56", egCommonState: "Средний" }
+{ school: 66, egCommonRating: "56.91", egCommomLevel: "57", egCommonState: "Средний" }
+{ school: 99, egCommonRating: "56.91", egCommomLevel: "58", egCommonState: "Средний" }
+{ school: 72, egCommonRating: "56.56", egCommomLevel: "59", egCommonState: "Средний" }
+{ school: 37, egCommonRating: "56.48", egCommomLevel: "60", egCommonState: "Средний" }
+{ school: 38, egCommonRating: "56.45", egCommomLevel: "61", egCommonState: "Средний" }
+{ school: 84, egCommonRating: "56.37", egCommomLevel: "62", egCommonState: "Средний" }
+{ school: 112, egCommonRating: "56.35", egCommomLevel: "63", egCommonState: "Средний" }
+{ school: 73, egCommonRating: "56.32", egCommomLevel: "64", egCommonState: "Средний" }
+{ school: 105, egCommonRating: "56.14", egCommomLevel: "65", egCommonState: "Средний" }
+{ school: 144, egCommonRating: "56.07", egCommomLevel: "66", egCommonState: "Средний" }
+{ school: 142, egCommonRating: "55.87", egCommomLevel: "67", egCommonState: "Средний" }
+{ school: 30, egCommonRating: "55.81", egCommomLevel: "68", egCommonState: "Средний" }
+{ school: 149, egCommonRating: "55.72", egCommomLevel: "69", egCommonState: "Средний" }
+{ school: 18, egCommonRating: "55.51", egCommomLevel: "70", egCommonState: "Средний" }
+{ school: 88, egCommonRating: "55.5", egCommomLevel: "71", egCommonState: "Средний" }
+{ school: 56, egCommonRating: "55.46", egCommomLevel: "72", egCommonState: "Средний" }
+{ school: 162, egCommonRating: "55.37", egCommomLevel: "73", egCommonState: "Средний" }
+{ school: 92, egCommonRating: "55.3", egCommomLevel: "74", egCommonState: "Средний" }
+{ school: 120, egCommonRating: "55.16", egCommomLevel: "75", egCommonState: "Средний" }
+{ school: 91, egCommonRating: "54.94", egCommomLevel: "76", egCommonState: "Средний" }
+{ school: 166, egCommonRating: "54.85", egCommomLevel: "77", egCommonState: "Средний" }
+{ school: 115, egCommonRating: "54.73", egCommomLevel: "78", egCommonState: "Средний" }
+{ school: 7, egCommonRating: "54.73", egCommomLevel: "79", egCommonState: "Средний" }
+{ school: 43, egCommonRating: "54.54", egCommomLevel: "80", egCommonState: "Средний" }
+{ school: 19, egCommonRating: "54.53", egCommomLevel: "81", egCommonState: "Средний" }
+{ school: 46, egCommonRating: "54.47", egCommomLevel: "82", egCommonState: "Средний" }
+{ school: 146, egCommonRating: "54.43", egCommomLevel: "83", egCommonState: "Средний" }
+{ school: 137, egCommonRating: "54.41", egCommomLevel: "84", egCommonState: "Средний" }
+{ school: 139, egCommonRating: "54.35", egCommomLevel: "85", egCommonState: "Средний" }
+{ school: 150, egCommonRating: "54.19", egCommomLevel: "86", egCommonState: "Средний" }
+{ school: 60, egCommonRating: "54.09", egCommomLevel: "87", egCommonState: "Ниже среднего" }
+{ school: 132, egCommonRating: "54.08", egCommomLevel: "88", egCommonState: "Ниже среднего" }
+{ school: 122, egCommonRating: "53.94", egCommomLevel: "89", egCommonState: "Ниже среднего" }
+{ school: 96, egCommonRating: "53.85", egCommomLevel: "90", egCommonState: "Ниже среднего" }
+{ school: 62, egCommonRating: "53.68", egCommomLevel: "91", egCommonState: "Ниже среднего" }
+{ school: 14, egCommonRating: "53.65", egCommomLevel: "92", egCommonState: "Ниже среднего" }
+{ school: 10, egCommonRating: "53.65", egCommomLevel: "93", egCommonState: "Ниже среднего" }
+{ school: 23, egCommonRating: "53.53", egCommomLevel: "94", egCommonState: "Ниже среднего" }
+{ school: 151, egCommonRating: "53.52", egCommomLevel: "95", egCommonState: "Ниже среднего" }
+{ school: 79, egCommonRating: "53.25", egCommomLevel: "96", egCommonState: "Ниже среднего" }
+{ school: 39, egCommonRating: "52.87", egCommomLevel: "97", egCommonState: "Ниже среднего" }
+{ school: 83, egCommonRating: "52.86", egCommomLevel: "98", egCommonState: "Ниже среднего" }
+{ school: 141, egCommonRating: "52.72", egCommomLevel: "99", egCommonState: "Ниже среднего" }
+{ school: 40, egCommonRating: "52.62", egCommomLevel: "100", egCommonState: "Ниже среднего" }
+{ school: 119, egCommonRating: "52.6", egCommomLevel: "101", egCommonState: "Ниже среднего" }
+{ school: 159, egCommonRating: "52.03", egCommomLevel: "102", egCommonState: "Ниже среднего" }
+{ school: 42, egCommonRating: "51.42", egCommomLevel: "103", egCommonState: "Ниже среднего" }
+{ school: 129, egCommonRating: "51.24", egCommomLevel: "104", egCommonState: "Ниже среднего" }
+{ school: 110, egCommonRating: "50.4", egCommomLevel: "105", egCommonState: "Ниже среднего" }
+{ school: 63, egCommonRating: "50.37", egCommomLevel: "106", egCommonState: "Ниже среднего" }
+{ school: 69, egCommonRating: "50.18", egCommomLevel: "107", egCommonState: "Ниже среднего" }
+{ school: 51, egCommonRating: "49.79", egCommomLevel: "108", egCommonState: "Ниже среднего" }
+{ school: 41, egCommonRating: "46.5", egCommomLevel: "109", egCommonState: "Самый низкий" }

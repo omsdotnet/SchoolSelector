@@ -1,0 +1,172 @@
+﻿{ street: "Лермонтова", buildNum: "131", lattitude:"54.984064434665", longtitude: "73.415444087269",  school: "1"}
+{ street: "Кордная 5-я", buildNum: "43а", lattitude:"54.959535645955", longtitude: "73.465432500022",  school: "2"}
+{ street: "Шота Руставели", buildNum: "1", lattitude:"54.925783203268", longtitude: "73.407343787878",  school: "3"}
+{ street: "Заозёрная", buildNum: "11г", lattitude:"55.046753935040", longtitude: "73.320771759189",  school: "4"}
+{ street: "Первомайская (Большие Поля)", buildNum: "1", lattitude:"55.066080248690", longtitude: "73.415675714119",  school: "5"}
+{ street: "Волховстроя", buildNum: "5", lattitude:"55.004289194565", longtitude: "73.353411197620",  school: "6"}
+{ street: "Северная 1-я", buildNum: "39 к1", lattitude:"55.005055062979", longtitude: "73.359634637667",  school: "6"}
+{ street: "Северная 1-я", buildNum: "39", lattitude:"55.004542162471", longtitude: "73.359196714582",  school: "6"}
+{ street: "Энтузиастов", buildNum: "25б", lattitude:"55.045038258741", longtitude: "73.284178250768",  school: "7"}
+{ street: "Тимофея Белозёрова", buildNum: "5", lattitude:"55.044755154152", longtitude: "73.302102756292",  school: "8"}
+{ street: "СибНИИСхоз", buildNum: "3 к2", lattitude:"55.033865953552", longtitude: "73.334051844910",  school: "9"}
+{ street: "Солнечная 2-я", buildNum: "15", lattitude:"54.999099328085", longtitude: "73.220629205583",  school: "10"}
+{ street: "Путилова", buildNum: "2", lattitude:"54.991405717933", longtitude: "73.276663668556",  school: "11"}
+{ street: "Ленинградская 2-я", buildNum: "24", lattitude:"54.924423115232", longtitude: "73.479936294817",  school: "12"}
+{ street: "Энтузиастов", buildNum: "47", lattitude:"55.044439323443", longtitude: "73.271970247104",  school: "12"}
+{ street: "20 Партсъезда", buildNum: "3", lattitude:"55.033025306307", longtitude: "73.286161835761",  school: "13"}
+{ street: "Ремесленная 7-я", buildNum: "77", lattitude:"55.001818184820", longtitude: "73.399601143369",  school: "13"}
+{ street: "Амурская 21-я", buildNum: "5", lattitude:"55.025902204691", longtitude: "73.407264226563",  school: "14"}
+{ street: "Амурская 21-я", buildNum: "17", lattitude:"55.030715960330", longtitude: "73.415649470579",  school: "15"}
+{ street: "Багратиона", buildNum: "7", lattitude:"55.023217581521", longtitude: "73.412623561494",  school: "16"}
+{ street: "Северная 27-я", buildNum: "90", lattitude:"55.025116540664", longtitude: "73.401325978584",  school: "17"}
+{ street: "Мира проспект", buildNum: "2а к1", lattitude:"55.023770009652", longtitude: "73.306793200816",  school: "18"}
+{ street: "Ипподромная", buildNum: "1", lattitude:"54.963844771162", longtitude: "73.402466961006",  school: "18"}
+{ street: "Победы", buildNum: "5", lattitude:"54.983584266834", longtitude: "73.367757447524",  school: "19"}
+{ street: "Таубе", buildNum: "15", lattitude:"54.986710210316", longtitude: "73.365121507518",  school: "19"}
+{ street: "Волгоградская", buildNum: "34б", lattitude:"54.991289810009", longtitude: "73.250265124095",  school: "21"}
+{ street: "Северная 24-я", buildNum: "216", lattitude:"55.022404458206", longtitude: "73.402894172607",  school: "23"}
+{ street: "Производственная 2-я", buildNum: "37", lattitude:"54.997408354353", longtitude: "73.440906563220",  school: "24"}
+{ street: "Олимпийская", buildNum: "7а", lattitude:"54.975723872455", longtitude: "73.473852880992",  school: "25"}
+{ street: "Лесной проезд", buildNum: "5", lattitude:"54.990994965022", longtitude: "73.256846848897",  school: "26"}
+{ street: "Кордная 3-я", buildNum: "25а", lattitude:"54.961521239689", longtitude: "73.451672419150",  school: "27"}
+{ street: "Кордная 5-я", buildNum: "3", lattitude:"54.959741345393", longtitude: "73.446034706630",  school: "27"}
+{ street: "Фугенфирова", buildNum: "11б", lattitude:"54.996372256610", longtitude: "73.269084404833",  school: "28"}
+{ street: "Третьяковская", buildNum: "61", lattitude:"54.997782942442", longtitude: "73.368927426963",  school: "29"}
+{ street: "Амурская 21-я", buildNum: "20а", lattitude:"55.029357717024", longtitude: "73.418494572367",  school: "29"}
+{ street: "22 Партсъезда", buildNum: "19", lattitude:"55.019620567314", longtitude: "73.419019608034",  school: "30"}
+{ street: "22 Партсъезда", buildNum: "17", lattitude:"55.019587644114", longtitude: "73.417648053372",  school: "30"}
+{ street: "Романенко", buildNum: "15а", lattitude:"54.982414962012", longtitude: "73.479131715592",  school: "31"}
+{ street: "Мира проспект", buildNum: "102а", lattitude:"55.030592390074", longtitude: "73.245093925291",  school: "32"}
+{ street: "Туполева", buildNum: "1", lattitude:"54.992456095015", longtitude: "73.300763650967",  school: "33"}
+{ street: "Учхозная 1-я", buildNum: "25", lattitude:"55.008264065947", longtitude: "73.466005447932",  school: "33"}
+{ street: "Дианова", buildNum: "12/2", lattitude:"54.996579657711", longtitude: "73.256282640333",  school: "34"}
+{ street: "Мельничная", buildNum: "102", lattitude:"54.913594539356", longtitude: "73.313271212715",  school: "35"}
+{ street: "Комкова", buildNum: "3в", lattitude:"54.998395959827", longtitude: "73.239128255829",  school: "36"}
+{ street: "Чокана Валиханова", buildNum: "17", lattitude:"54.975548040649", longtitude: "73.385187395255",  school: "37"}
+{ street: "5-я линия", buildNum: "117Б", lattitude:"54.981412159522", longtitude: "73.405042306475",  school: "38"}
+{ street: "Транспортная 4-я", buildNum: "56", lattitude:"54.950902080523", longtitude: "73.432171783567",  school: "39"}
+{ street: "Транспортная 3-я", buildNum: "2", lattitude:"54.959141671645", longtitude: "73.403343323450",  school: "40"}
+{ street: "50 лет ВЛКСМ", buildNum: "7Б", lattitude:"54.978062170827", longtitude: "73.474580797767",  school: "41"}
+{ street: "Дмитриева", buildNum: "2/8", lattitude:"54.990290989254", longtitude: "73.317726094084",  school: "42"}
+{ street: "Кирова", buildNum: "7а", lattitude:"54.949087619401", longtitude: "73.419930675473",  school: "43"}
+{ street: "Сергея Тюленина", buildNum: "5", lattitude:"55.041907901713", longtitude: "73.307837197951",  school: "44"}
+{ street: "Василия Товстухо", buildNum: "4а", lattitude:"54.975794550094", longtitude: "73.468143494479",  school: "45"}
+{ street: "Бородина", buildNum: "19", lattitude:"55.052396783298", longtitude: "73.311874138224",  school: "46"}
+{ street: "Ватутина", buildNum: "13 к1", lattitude:"54.984819444374", longtitude: "73.277862393775",  school: "47"}
+{ street: "Иванишко", buildNum: "31", lattitude:"54.990210574549", longtitude: "73.428537063548",  school: "48"}
+{ street: "Фугенфирова", buildNum: "5а", lattitude:"54.995449645954", longtitude: "73.267133220214",  school: "49"}
+{ street: "Новостройка", buildNum: "20б", lattitude:"54.928722858305", longtitude: "73.274638449481",  school: "50"}
+{ street: "Коммунальная", buildNum: "13б", lattitude:"55.054089161411", longtitude: "73.313134392087",  school: "51"}
+{ street: "Мельничная", buildNum: "44", lattitude:"54.928303679690", longtitude: "73.319628924277",  school: "53"}
+{ street: "70 лет Октября", buildNum: "20/3", lattitude:"54.984905635018", longtitude: "73.321168456379",  school: "54"}
+{ street: "Мельничная", buildNum: "4", lattitude:"54.933338513232", longtitude: "73.324213894701",  school: "55"}
+{ street: "Масленникова", buildNum: "171", lattitude:"54.975924809325", longtitude: "73.417297951030",  school: "56"}
+{ street: "Масленникова", buildNum: "223", lattitude:"54.976232553878", longtitude: "73.430578741976",  school: "56"}
+{ street: "Камерный пер", buildNum: "47", lattitude:"54.953844742102", longtitude: "73.458628906367",  school: "58"}
+{ street: "Правды", buildNum: "30", lattitude:"54.935815911205", longtitude: "73.413946077009",  school: "59"}
+{ street: "Долгирева", buildNum: "91", lattitude:"55.018556639573", longtitude: "73.354285970665",  school: "60"}
+{ street: "Блюхера", buildNum: "22в", lattitude:"55.037499022993", longtitude: "73.294697827545",  school: "61"}
+{ street: "Декабристов", buildNum: "112", lattitude:"54.967589939756", longtitude: "73.394420746200",  school: "62"}
+{ street: "Энтузиастов", buildNum: "11б", lattitude:"55.045003896163", longtitude: "73.289982063410",  school: "63"}
+{ street: "Чкалова", buildNum: "3", lattitude:"54.978544815841", longtitude: "73.374741285277",  school: "64"}
+{ street: "Омская", buildNum: "75", lattitude:"54.990517338123", longtitude: "73.396698934072",  school: "65"}
+{ street: "Красный Путь", buildNum: "22а", lattitude:"54.998017552763", longtitude: "73.358798976254",  school: "66"}
+{ street: "20 лет Октября", buildNum: "14", lattitude:"54.941778685063", longtitude: "73.328781008298",  school: "67"}
+{ street: "Красной Звезды 1-я", buildNum: "25", lattitude:"54.922286233784", longtitude: "73.368586135276",  school: "68"}
+{ street: "Новая 5-я", buildNum: "29", lattitude:"54.921739448742", longtitude: "73.369447080881",  school: "68"}
+{ street: "Карла Маркса проспект", buildNum: "24а", lattitude:"54.962576779183", longtitude: "73.382957769876",  school: "69"}
+{ street: "Ноябрьская (Осташково)", buildNum: "15", lattitude:"54.963050634144", longtitude: "73.551463171026",  school: "70"}
+{ street: "Усадебная", buildNum: "13", lattitude:"54.916872339393", longtitude: "73.441308242643",  school: "71"}
+{ street: "Плеханова", buildNum: "59", lattitude:"54.971177885514", longtitude: "73.405658421707",  school: "72"}
+{ street: "Ермолаева", buildNum: "5б", lattitude:"54.979105870629", longtitude: "73.471347174928",  school: "73"}
+{ street: "Василия Товстухо", buildNum: "5а", lattitude:"54.980445413499", longtitude: "73.472273974798",  school: "73"}
+{ street: "Заречный бульвар", buildNum: "5", lattitude:"55.003126606338", longtitude: "73.289243788612",  school: "74"}
+{ street: "Фёдора Крылова", buildNum: "4а", lattitude:"54.944765261094", longtitude: "73.379150482468",  school: "75"}
+{ street: "Крыловская", buildNum: "50", lattitude:"54.923905165090", longtitude: "73.404215328512",  school: "76"}
+{ street: "Волочаевская", buildNum: "17г", lattitude:"54.996200184718", longtitude: "73.351804600796",  school: "77"}
+{ street: "Чайковского", buildNum: "5", lattitude:"54.931396874180", longtitude: "73.375908440493",  school: "78"}
+{ street: "Чередовая 10-я", buildNum: "32а", lattitude:"54.921384283446", longtitude: "73.420056422324",  school: "79"}
+{ street: "20 Партсъезда", buildNum: "12", lattitude:"55.033765912739", longtitude: "73.283022793009",  school: "80"}
+{ street: "Краснознамённая", buildNum: "3", lattitude:"55.035536238523", longtitude: "73.472951730425",  school: "81"}
+{ street: "Краснознамённая", buildNum: "3а", lattitude:"55.033707854634", longtitude: "73.473021666052",  school: "81"}
+{ street: "Волкова", buildNum: "5б", lattitude:"55.035501532055", longtitude: "73.302998848047",  school: "82"}
+{ street: "Волго-Донская", buildNum: "15", lattitude:"54.926358883003", longtitude: "73.476616549535",  school: "83"}
+{ street: "Культуры проспект", buildNum: "15", lattitude:"55.031753708917", longtitude: "73.276405084559",  school: "84"}
+{ street: "Фрунзе", buildNum: "71", lattitude:"54.994799037037", longtitude: "73.370828749584",  school: "85"}
+{ street: "Магистральная", buildNum: "22", lattitude:"55.037346649006", longtitude: "73.282772055655",  school: "86"}
+{ street: "Добролюбова", buildNum: "17", lattitude:"54.941557327531", longtitude: "73.402501065446",  school: "87"}
+{ street: "Транспортная 3-я", buildNum: "5", lattitude:"54.957483506269", longtitude: "73.407723932490",  school: "88"}
+{ street: "Рабочая 17-я", buildNum: "89", lattitude:"54.943415998188", longtitude: "73.434416388385",  school: "89"}
+{ street: "Омская", buildNum: "197", lattitude:"54.992407801635", longtitude: "73.426107251153",  school: "90"}
+{ street: "Северная 24-я", buildNum: "119", lattitude:"55.023709410067", longtitude: "73.380023518453",  school: "91"}
+{ street: "Ангарская", buildNum: "7а", lattitude:"54.950740886487", longtitude: "73.391858807814",  school: "92"}
+{ street: "Арсеньева", buildNum: "1", lattitude:"55.012328145577", longtitude: "73.407433579829",  school: "93"}
+{ street: "Андрианова", buildNum: "14/3", lattitude:"55.027422834491", longtitude: "73.271983772437",  school: "94"}
+{ street: "Мира проспект", buildNum: "165д", lattitude:"55.028600491310", longtitude: "73.220534361188",  school: "95"}
+{ street: "Светлая", buildNum: "5", lattitude:"55.050142080540", longtitude: "73.302628716673",  school: "96"}
+{ street: "Володарского", buildNum: "74", lattitude:"54.943197713604", longtitude: "73.336036929216",  school: "97"}
+{ street: "50 лет Профсоюзов", buildNum: "105", lattitude:"55.033569129990", longtitude: "73.255103713130",  school: "98"}
+{ street: "Молодова", buildNum: "12", lattitude:"54.905642377267", longtitude: "73.450678976956",  school: "99"}
+{ street: "Марьяновская 4-я", buildNum: "67а", lattitude:"54.917794628723", longtitude: "73.365828046653",  school: "100"}
+{ street: "Чайковского", buildNum: "68", lattitude:"54.930175642898", longtitude: "73.369580178660",  school: "101"}
+{ street: "Загородный микрорайон", buildNum: "13", lattitude:"55.064310898727", longtitude: "73.514315657656",  school: "103"}
+{ street: "Станционная 3-я", buildNum: "69", lattitude:"54.928472258852", longtitude: "73.490533196189",  school: "104"}
+{ street: "Седова", buildNum: "55а", lattitude:"54.947194111518", longtitude: "73.321813124108",  school: "105"}
+{ street: "Бархатовой", buildNum: "6г", lattitude:"55.046517700052", longtitude: "73.322365739166",  school: "106"}
+{ street: "Сибирский проспект", buildNum: "6а", lattitude:"54.914629205565", longtitude: "73.453632975144",  school: "107"}
+{ street: "Моторная", buildNum: "9", lattitude:"54.910438104423", longtitude: "73.449452687131",  school: "108"}
+{ street: "Поселковая 4-я", buildNum: "40", lattitude:"55.029515187040", longtitude: "73.292744044435",  school: "109"}
+{ street: "Станционная 6-я", buildNum: "11", lattitude:"54.923104413954", longtitude: "73.456274052055",  school: "110"}
+{ street: "Полевая (Николаевка)", buildNum: "95", lattitude:"55.054953863449", longtitude: "73.176322018199",  school: "111"}
+{ street: "Круговая", buildNum: "2/1", lattitude:"55.038176753969", longtitude: "73.260043745602",  school: "112"}
+{ street: "Северная 18-я", buildNum: "91", lattitude:"55.018803478245", longtitude: "73.374018716691",  school: "113"}
+{ street: "Марьяновская 19-я", buildNum: "40а", lattitude:"54.905544334879", longtitude: "73.364287077457",  school: "114"}
+{ street: "Циолковского", buildNum: "1", lattitude:"54.962382234531", longtitude: "73.380558356349",  school: "115"}
+{ street: "Спортивный проезд", buildNum: "9а", lattitude:"54.957306025749", longtitude: "73.383707752459",  school: "115"}
+{ street: "Спортивный проезд", buildNum: "9", lattitude:"54.957442941335", longtitude: "73.382933055804",  school: "115"}
+{ street: "Ремесленная 6-я", buildNum: "13", lattitude:"55.005394013607", longtitude: "73.387956611991",  school: "116"}
+{ street: "Андрианова", buildNum: "4", lattitude:"55.026683388368", longtitude: "73.280731932169",  school: "117"}
+{ street: "Космический проспект", buildNum: "13", lattitude:"54.970098568236", longtitude: "73.444976670732",  school: "118"}
+{ street: "Талалихина", buildNum: "29а", lattitude:"54.917090845082", longtitude: "73.306681491514",  school: "119"}
+{ street: "Менделеева проспект", buildNum: "32в", lattitude:"55.040794219744", longtitude: "73.323239941627",  school: "120"}
+{ street: "Алексея Полторацкого", buildNum: "51", lattitude:"54.925470779308", longtitude: "73.421576178383",  school: "122"}
+{ street: "20 Партсъезда", buildNum: "48", lattitude:"55.031616590349", longtitude: "73.265635563035",  school: "123"}
+{ street: "40 лет Победы (Крутая Горка)", buildNum: "4", lattitude:"55.366316287361", longtitude: "73.232136913924",  school: "124"}
+{ street: "Всеволода Иванова", buildNum: "5", lattitude:"54.952176936723", longtitude: "73.381914945053",  school: "125"}
+{ street: "Красноярова (Черёмуховское)", buildNum: "1/1", lattitude:"54.849691459173", longtitude: "73.455556500492",  school: "126"}
+{ street: "Военный 14-й городок", buildNum: "148", lattitude:"54.848536421276", longtitude: "73.402848540645",  school: "127"}
+{ street: "Магистральная", buildNum: "70", lattitude:"55.033838534975", longtitude: "73.261598815339",  school: "129"}
+{ street: "Красных Зорь", buildNum: "108б", lattitude:"54.980466327747", longtitude: "73.427397930208",  school: "130"}
+{ street: "40 лет Ракетных Войск (Степной)", buildNum: "8", lattitude:"55.030205056693", longtitude: "73.504609464255",  school: "131"}
+{ street: "Звездова", buildNum: "96", lattitude:"54.986653971108", longtitude: "73.401773067941",  school: "132"}
+{ street: "19 Партсъезда", buildNum: "37", lattitude:"55.043421684230", longtitude: "73.268227056392",  school: "133"}
+{ street: "Космический проспект", buildNum: "79", lattitude:"54.975334887754", longtitude: "73.455083241600",  school: "134"}
+{ street: "Дмитриева", buildNum: "4/3", lattitude:"54.988475331498", longtitude: "73.313427070085",  school: "135"}
+{ street: "Комарова проспект", buildNum: "27/3", lattitude:"54.980042444906", longtitude: "73.312628772664",  school: "137"}
+{ street: "Рабочая 22-я", buildNum: "80", lattitude:"54.937831047115", longtitude: "73.435701560684",  school: "138"}
+{ street: "Заречный бульвар", buildNum: "8", lattitude:"55.002468322560", longtitude: "73.291487120031",  school: "139"}
+{ street: "Дмитриева", buildNum: "13", lattitude:"54.979991211749", longtitude: "73.307211320493",  school: "140"}
+{ street: "Шинная 6-я", buildNum: "9б", lattitude:"54.952554916755", longtitude: "73.453161231478",  school: "141"}
+{ street: "Харьковская", buildNum: "21", lattitude:"54.942724197733", longtitude: "73.420105342528",  school: "142"}
+{ street: "Свободы", buildNum: "54", lattitude:"54.944900619014", longtitude: "73.417482306878",  school: "142"}
+{ street: "Тимофея Белозёрова", buildNum: "20", lattitude:"55.049198614160", longtitude: "73.306801807178",  school: "143"}
+{ street: "Дианова", buildNum: "18/2", lattitude:"54.997465135111", longtitude: "73.247040385828",  school: "144"}
+{ street: "12 Декабря", buildNum: "114", lattitude:"54.952478829951", longtitude: "73.333009484449",  school: "145"}
+{ street: "Омская", buildNum: "106", lattitude:"54.989781724714", longtitude: "73.401346616824",  school: "146"}
+{ street: "Добролюбова", buildNum: "22", lattitude:"54.940297346501", longtitude: "73.401154728266",  school: "147"}
+{ street: "Василия Маргелова (Светлый)", buildNum: "400/1", lattitude:"54.887179405292", longtitude: "73.485857191287",  school: "148"}
+{ street: "Заречный бульвар", buildNum: "3", lattitude:"55.001614712911", longtitude: "73.286921663349",  school: "149"}
+{ street: "Мира проспект", buildNum: "5 к3", lattitude:"55.021911080229", longtitude: "73.300862958412",  school: "149"}
+{ street: "Путилова", buildNum: "12а", lattitude:"54.994641428076", longtitude: "73.280541757629",  school: "150"}
+{ street: "Дмитриева", buildNum: "13/10", lattitude:"54.979093956193", longtitude: "73.305846954884",  school: "151"}
+{ street: "5 Армии", buildNum: "141", lattitude:"55.000446373877", longtitude: "73.386580322548",  school: "152"}
+{ street: "Мира проспект", buildNum: "169г", lattitude:"55.030751097333", longtitude: "73.218039304678",  school: "153"}
+{ street: "22 Апреля", buildNum: "31", lattitude:"55.040287168615", longtitude: "73.274614337830",  school: "153"}
+{ street: "50 лет Профсоюзов", buildNum: "98", lattitude:"55.039750041813", longtitude: "73.275330827529",  school: "153"}
+{ street: "Барнаульская", buildNum: "134", lattitude:"55.021856083425", longtitude: "73.425388822615",  school: "159"}
+{ street: "Пролетарская (Береговой)", buildNum: "3", lattitude:"55.177073625692", longtitude: "73.215754683089",  school: "160"}
+{ street: "Входной микрорайон", buildNum: "101 к1", lattitude:"54.952873175196", longtitude: "73.170752921739",  school: "161"}
+{ street: "Входной микрорайон", buildNum: "101", lattitude:"54.953063894252", longtitude: "73.173541213679",  school: "161"}
+{ street: "Лобкова", buildNum: "2", lattitude:"54.940065070765", longtitude: "73.382657510181",  school: "162"}
+{ street: "Свободы", buildNum: "157", lattitude:"54.936991620941", longtitude: "73.428239293178",  school: "163"}
+{ street: "Нефтезаводская", buildNum: "3а", lattitude:"55.027477007543", longtitude: "73.269632534420",  school: "166"}
