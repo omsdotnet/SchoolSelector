@@ -1,2 +1,2 @@
-﻿var baseServiceUrl = 'http://localhost:49427/GetData.aspx';
-var addresServiceUrl = 'http://localhost:49427/GetSchoolAddressData.aspx';
+﻿var baseServiceUrl = 'http://bcwddata.azurewebsites.net/GetData.aspx';
+var addresServiceUrl = 'http://bcwddata.azurewebsites.net/GetSchoolAddressData.aspx';

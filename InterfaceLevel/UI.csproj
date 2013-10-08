@@ -80,6 +80,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\schoolselector - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\schoolselector - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Test.pubxml" />
   </ItemGroup>
   <ItemGroup>
