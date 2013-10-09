@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Device.Location;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -53,7 +54,10 @@ namespace BL
 
                     if (null != cc)
                     {
-                        GeoCoordinate source = new GeoCoordinate(Convert.ToDouble(cc.Lng.Replace('.', ',')), Convert.ToDouble(cc.Lat.Replace('.', ',')));
+                        NumberFormatInfo provider = new NumberFormatInfo();
+                        provider.NumberDecimalSeparator = ".";
+
+                        GeoCoordinate source = new GeoCoordinate(Convert.ToDouble(cc.Lng, provider), Convert.ToDouble(cc.Lat, provider));
 
                         Dictionary<int, Tuple<double, Guid>> schoolDistance = new Dictionary<int, Tuple<double, Guid>>();
                         foreach (KeyValuePair<Guid, SchoolData> item in Global.schoolDict)
