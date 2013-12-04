@@ -1,2 +1,1 @@
-﻿var baseServiceUrl = 'http://bcwddata.azurewebsites.net/GetData.aspx';
-var addresServiceUrl = 'http://bcwddata.azurewebsites.net/GetSchoolAddressData.aspx';
+﻿document.write('<script src="http://schoolselector.ru/ah/GetJSProxy.aspx"></script>');

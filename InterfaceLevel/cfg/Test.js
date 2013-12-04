@@ -1,2 +1,1 @@
-﻿var baseServiceUrl = 'http://bcwd.dyndns.org/service/GetData.aspx';
-var addresServiceUrl = 'http://bcwd.dyndns.org/service/GetSchoolAddressData.aspx';
+﻿document.write('<script src="http://bcwd.dyndns.org/service/GetJSProxy.aspx"></script>');

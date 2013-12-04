@@ -1,0 +1,100 @@
+﻿<!-- STYLES START -->
+<style type="text/css">
+
+.schooldata_wrapper{
+    width: 100%;
+    height: auto;
+    margin-top: 14px;
+}
+
+.schooldata_left_block{
+   float: left;
+   width: 150px;
+   height: auto;
+}
+
+.schooldata_address_block{
+   float: left;
+   height: auto;
+   padding: 0px;
+}
+
+.schooldata_raiting_block{
+   float: left;
+   height: auto;
+   margin-top: 6px;
+   width: 100%;
+}
+
+
+
+.schooldata_school_num{
+    font-weight: bold;
+    font-size: larger;
+    }
+
+.schooldata_item_data_middle_level{
+    background-color: yellow;
+    color: black;
+    }
+
+.schooldata_item_data_low_middle_level{
+    background-color: blue;
+    color: white;
+    }
+
+.schooldata_item_data_high_middle_level{
+    background-color: green;
+    color: white;
+    }
+
+.schooldata_item_data_low_level{
+    background-color: deepskyblue;
+    color: white;
+    }
+
+.schooldata_item_data_high_level{
+    background-color: gold;
+    color: white;
+    }
+
+.schooldata_item_data_no_data{
+    background-color: lightgray;
+    color: black;
+    }
+
+
+
+</style>
+<!-- STYLES END -->
+
+
+<div class="schooldata_wrapper">
+	<div class="schooldata_left_block">
+        <span class="schooldata_school_num">№ {school_num}</span>
+	</div>
+	<div class="schooldata_address_block">
+        <p>Адрес:<br/>
+        {address}</p>
+	</div>
+    <div style="clear:left"></div>
+	<div class="schooldata_raiting_block">
+        <p>
+            <!-- RAITING DATA
+            Расположение в общем рейтинге:<br/>
+            <span class="{common_raiting_level_style}">{common_raiting_level}</span><br/>
+            Общий рейтинг: {common_raiting}<br/>
+            Общее место по городу: {common_level}<br/>
+            RAITING DATA -->
+
+            <!-- NORAITING DATA
+            <span class="schooldata_item_data_no_data">В рейтинге отсутствует</span>
+            NORAITING DATA -->
+        </p>
+	</div>
+
+
+
+</div>
+
+

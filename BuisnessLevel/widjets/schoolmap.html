@@ -1,0 +1,184 @@
+﻿<!-- STYLES START -->
+<style type="text/css">
+
+.schoolmapdata_wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.schoolmapdata_main{
+    width: 100%;
+    height: 90%;
+}
+
+.schoolmapdata_legend_topmargin{
+    width: 100%;
+    height: 5%;
+}
+
+.schoolmapdata_legend_wrapper{
+    width: 100%;
+    height: 5%;
+}
+
+
+.schoolmapdata_legend_margin{
+    width: 15%;
+    float: left;
+}
+
+.schoolmapdata_legend{
+    width: 70%;
+    float: left;
+}
+
+.schoolmapdata_legend_insection{
+    width: 35%;
+    float: left;
+}
+
+.schoolmapdata_legend_insection_center{
+    width: 30%;
+    float: left;
+}
+
+.schoolmapdata_legend_text{
+    margin-left: 30px;
+    text-align: left;
+}
+.schoolmapdata_legend_box{
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+
+.schoolmapdata_legend_high{
+    background-color: green;
+}
+
+.schoolmapdata_legend_middle{
+    background-color: yellow;
+}
+
+.schoolmapdata_legend_low{
+    background-color: blue;
+}
+
+
+</style>
+<!-- STYLES END -->
+
+
+<div class="schoolmapdata_wrapper">
+
+    <div id="schoolmapdata" class="schoolmapdata_main"></div>
+
+    <div class="schoolmapdata_legend_topmargin"></div>
+
+    <div class="schoolmapdata_legend_wrapper">
+
+        <div class="schoolmapdata_legend_margin">&nbsp;</div>
+        <div class="schoolmapdata_legend">
+
+            <div class="schoolmapdata_legend_insection">
+                <div class="schoolmapdata_legend_box schoolmapdata_legend_high"></div>
+                <div class="schoolmapdata_legend_text">Выше среднего</div>
+            </div>
+
+            <div class="schoolmapdata_legend_insection_center">
+                <div class="schoolmapdata_legend_box schoolmapdata_legend_middle"></div>
+                <div class="schoolmapdata_legend_text">Средний</div>
+            </div>
+
+            <div class="schoolmapdata_legend_insection">
+                <div class="schoolmapdata_legend_box schoolmapdata_legend_low"></div>
+                <div class="schoolmapdata_legend_text">Ниже среднего</div>
+            </div>
+
+        </div>
+        <div class="schoolmapdata_legend_margin">&nbsp;</div>
+
+    </div>
+
+
+
+
+</div>
+
+
+<script src="<%= baseUrl %>mapdata/mapdata1.js"></script>
+
+
+<script type="text/javascript">
+    var myMap;
+    var isZoom = false;
+
+
+      function initMap() {
+	      myMap = new ymaps.Map("schoolmapdata", {
+	          center: [54.977271, 73.38665],
+	          zoom: 11,
+	          type: "yandex#hybrid",
+	          behaviors: ["default"]
+	      });
+
+	      myMap.events.add("click", zoomChanger);
+	      myMap.events.add("dblclick", zoomChanger);
+	      myMap.events.add("contextmenu", zoomChanger);
+
+	      myMap.controls
+                  .add("zoomControl", { left: 5, top: 5 })
+                  .add("typeSelector")
+                  .add("mapTools", { left: 35, top: 5 });
+
+	      var myCollection = loadDataMap();
+          
+	      myCollection.each(function (obj) {
+	          obj.events.add("click", function (e) {
+	              var coords = e.get("coordPosition");
+
+	              getData(coords[0].toPrecision(6), coords[1].toPrecision(6));
+	          });
+
+	      });
+
+	      myMap.geoObjects.add(myCollection);
+
+	  }
+
+	  function getData(attitude, lattitude) {
+
+	      if ("undefined" != typeof schoolDataProxy) {
+	          schoolDataProxy.GetCoordData(attitude, lattitude);
+	      }
+
+	  }
+
+	  function zoomChanger(e) {
+	      if (isZoom) {
+	          myMap.behaviors.disable(["scrollZoom"]);
+	          isZoom = false;
+	      } else {
+	          myMap.behaviors.enable(["scrollZoom"]);
+	          isZoom = true;
+	      }
+	  }
+
+	  if ("undefined" == typeof ymaps) {
+
+	      if ("undefined" != typeof schoolDataProxy) {
+
+	          schoolDataProxy.LoadJS(
+                  "http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU",
+                  function () {
+                      ymaps.ready(initMap);
+                  });
+
+	      }
+	  }
+	  else {
+	      ymaps.ready(initMap);
+	  }
+
+</script>

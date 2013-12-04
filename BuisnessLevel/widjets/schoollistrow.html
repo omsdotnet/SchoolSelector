@@ -1,63 +1,84 @@
 ﻿<!-- STYLES START -->
 
 <style type="text/css">
-.wrapper{
-    position: relative;
-    float: left;
-    top: 0px;
-    left: 0px;
+
+.schoollist_wrapper{
+    width: 100%;
+    height: auto;
+    margin-top: 14px;
 }
-.left1{
-    position: relative;
-    float: left;
-    width: 80px;
-    text-align: left;
-    font-weight: 700;
-    font-size: large;
-    }
 
-.school{
-    }
-
-
-
-.left2{
-   position: relative;
-   float: left;
-   width: 200px;
+.schoollist_item{
+    width: 100%;
+    height: auto;
 }
-.left3{
-   position: relative;
+
+.schoollist_item_left_block{
+    float: left;
+    height: auto;
+    width: 10%;
+}
+
+.schoollist_item_main_block{
+    float: left;
+    height: auto;
+    width: 90%;
+}
+
+.schoollist_item_main_block_head_block{
    float: left;
-   width: 422px;
+   height: auto;
+   width: 100%;
+   font-size: medium;
+   font-weight: 500;
+}
+
+.schoollist_item_main_block_left_block{
+   float: left;
+   width: 100px;
+   height: auto;
+   margin-top: 6px;
+}
+
+.schoollist_item_main_block_main_block{
+   float: left;
+   height: auto;
+   margin-top: 6px;
+}
+
+
+
+.schoollist_item_data_school_num{
+    font-weight: bold;
+    font-size: larger;
     }
 
-.middle_level{
+.schoollist_item_data_middle_level{
     background-color: yellow;
     color: black;
     }
 
-.low_middle_level{
+.schoollist_item_data_low_middle_level{
     background-color: blue;
     color: white;
     }
 
-.high_middle_level{
+.schoollist_item_data_high_middle_level{
     background-color: green;
     color: white;
     }
 
-.low_level{
+.schoollist_item_data_low_level{
     background-color: deepskyblue;
     color: white;
     }
 
-.high_level{
+.schoollist_item_data_high_level{
     background-color: gold;
     color: white;
     }
 
-.no_data{
+.schoollist_item_data_no_data{
     background-color: lightgray;
     color: black;
     }
@@ -66,29 +87,36 @@
 </style>
 <!-- STYLES END -->
 
+<div class="schoollist_wrapper">
+    <!-- REPEATER START -->
+    <div class="schoollist_item">
+	         <div class="schoollist_item_left_block">
+                 <span class="schoollist_item_data_school_num">{school_num}</span>
+	         </div>
+             <div class="schoollist_item_main_block">
+                 <div class="schoollist_item_main_block_head_block">
+                     Адрес: {address}
+                 </div>
+	             <div class="schoollist_item_main_block_left_block">
+                     <p>Расстояние:<br/>
+                     {distance}</p>
+	             </div>
+	             <div class="schoollist_item_main_block_main_block">
+                     <p>
+                           <!-- RAITING DATA
+                           Расположение в общем рейтинге:<br/>
+                           <span class="{common_raiting_level_style}">{common_raiting_level}</span><br/>
+                           Общий рейтинг: {common_raiting}<br/>
+                           Общее место по городу: {common_level}<br/>
+                           RAITING DATA -->
 
-<!-- REPEATER START -->
-<div class="wrapper">
-	     <div class="left1">
-             <span class="school">{school_num}</span>
-	     </div>
-	     <div class="left2">
-             <p>Расстояние:<br/>
-             {distance}</p>
-	     </div>
-	     <div class="left3">
-             <p>
-                   <!-- RAITING DATA
-                   Расположение в общем рейтинге:<br/>
-                   <span class="{common_raiting_level_style}">{common_raiting_level}</span><br/>
-                   Общий рейтинг: {common_raiting}<br/>
-                   Общее место по городу: {common_level}<br/>
-                   RAITING DATA -->
-
-                   <!-- NORAITING DATA
-                   <span class="no_data">В рейтинге отсутствует</span>
-                   NORAITING DATA -->
-             </p>
-	     </div>
-</div> 
-<!-- REPEATER END -->
+                           <!-- NORAITING DATA
+                           <span class="schoollist_item_data_no_data">В рейтинге отсутствует</span>
+                           NORAITING DATA -->
+                     </p>
+	             </div>
+             </div>
+    </div>
+    <div style="clear:left"></div>
+    <!-- REPEATER END -->
+</div>

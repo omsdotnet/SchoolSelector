@@ -12,7 +12,7 @@ using BL.objects;
 
 namespace BL
 {
-    public partial class GetData : System.Web.UI.Page
+    public partial class GetSchoolCoordMapData : System.Web.UI.Page
     {
         
         protected void Page_PreInit(object sender, EventArgs e)

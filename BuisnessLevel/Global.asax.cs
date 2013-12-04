@@ -23,9 +23,17 @@ namespace BL
         public static string patternWidjetBody = string.Empty;
         public static string patternWidjetRow = string.Empty;
 
-        public static string widgetNotFoundAddress = string.Empty;
+        public static string widgetNotFoundData = string.Empty;
         public static string widgetNotFoundAddressStyle = string.Empty;
         public static string widgetNotFoundAddressBody = string.Empty;
+
+
+        public static string patternWidjetSchoolData = string.Empty;
+        public static string patternWidjetSchoolDataStyle = string.Empty;
+        public static string patternWidjetSchoolDataBody = string.Empty;
+
+        public static string patternWidjetSchoolMap = string.Empty;
+
 
         protected void Application_Start(object sender, EventArgs e)
         {
@@ -60,17 +68,20 @@ namespace BL
 
             
             patternWidjetSchoolList = File.ReadAllText(Server.MapPath("~\\widjets\\schoollistrow.html"));
-
-            int rowPozStart = patternWidjetSchoolList.IndexOf(rowStart);
-            int rowPozEnd = patternWidjetSchoolList.IndexOf(rowEnd, rowPozStart);
-
             patternWidjetStyle = getWidgetStyle(patternWidjetSchoolList);
             patternWidjetRow = getWidgetRow(patternWidjetSchoolList);
             patternWidjetBody = getWidgetBody(patternWidjetSchoolList);
 
-            widgetNotFoundAddress = File.ReadAllText(Server.MapPath("~\\widjets\\NoFoundAddress.html"));
-            widgetNotFoundAddressStyle = getWidgetStyle(widgetNotFoundAddress);
-            widgetNotFoundAddressBody = getWidgetBody(widgetNotFoundAddress);
+            widgetNotFoundData = File.ReadAllText(Server.MapPath("~\\widjets\\NoFoundData.html"));
+            widgetNotFoundAddressStyle = getWidgetStyle(widgetNotFoundData);
+            widgetNotFoundAddressBody = getWidgetBody(widgetNotFoundData);
+
+            patternWidjetSchoolData = File.ReadAllText(Server.MapPath("~\\widjets\\schooldata.html"));
+            patternWidjetSchoolDataStyle = getWidgetStyle(patternWidjetSchoolData);
+            patternWidjetSchoolDataBody = getWidgetBody(patternWidjetSchoolData);
+
+
+            patternWidjetSchoolMap = File.ReadAllText(Server.MapPath("~\\widjets\\schoolmap.html"));        
         }
 
         private string getWidgetStyle(string widgetPattern)
@@ -100,6 +111,33 @@ namespace BL
             string ret = widgetPattern.Replace(styleStart + widgetStyle + styleEnd, string.Empty);
             return ret;
         }
+
+
+
+
+
+        public static void DisableBlock(ref string ret, string nameBlock)
+        {
+            int pozStart = ret.IndexOf("<!-- " + nameBlock);
+            int pozEnd = ret.IndexOf(nameBlock + " -->", pozStart);
+
+            string blk = ret.Substring(pozStart, pozEnd + nameBlock.Length + " -->".Length - pozStart);
+            ret = ret.Replace(blk, string.Empty);
+        }
+
+        public static void EnableBlock(ref string ret, string nameBlock)
+        {
+            int pozStart = ret.IndexOf("<!-- " + nameBlock);
+            int pozEnd = ret.IndexOf(nameBlock + " -->", pozStart);
+
+            string blk = ret.Substring(pozStart, pozEnd + nameBlock.Length + " -->".Length - pozStart);
+            string oldBlk = blk;
+            blk = blk.Replace("<!-- " + nameBlock, string.Empty);
+            blk = blk.Replace(nameBlock + " -->", string.Empty);
+
+            ret = ret.Replace(oldBlk, blk);
+        }
+
 
 
         private string styleStart = "<!-- STYLES START -->";

@@ -1,11 +1,4 @@
-/*
- * Responsive HTML5/CSS3 template
- * http://webcodebuilder.com/examples/responsive-html5css3-template/index.html
- *
- * Copyright 2012, WebCodeBuilder
- * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
+
 @media all{
 	body{
 		font:14px Arial, Helvetica, sans-serif;
@@ -568,6 +561,15 @@
 			color-stop(1, rgb(123,145,177))
 		)
 	}
+
+    .city_mark {
+        width: 100px;
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        text-align: left;
+    }
+
 	.gallery{
 		background:url(../img/sep-hor.gif) no-repeat 50% 0;
 		padding:2px 0;
@@ -714,6 +716,13 @@
 		background:rgba(57,143,20,0.5) !important;
 		margin: 0 0 15px;
 	}
+
+    .share-block{
+        float: left;
+        width: auto;
+        height: auto;
+    }
+
 }
 @media all and (max-width: 1024px){
 }

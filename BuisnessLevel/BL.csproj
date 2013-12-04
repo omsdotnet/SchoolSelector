@@ -28,6 +28,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -65,37 +67,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Device" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\RatingData.txt" />
     <Content Include="Default.aspx" />
-    <Content Include="GetData.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="GetSchoolCoordMapData.aspx" />
+    <Content Include="GetJSProxy.aspx" />
     <Content Include="GetSchoolAddressData.aspx" />
+    <Content Include="GetSchoolData.aspx" />
+    <Content Include="GetSchoolMapData.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="data\SchoolData.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\SchoolData.txt" />
+    <Content Include="mapdata\mapdata1.js" />
+    <Content Include="mapdata\mapdata1_omsk.js" />
     <Content Include="Robots.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="widjets\NoFoundAddress.html" />
+    <Content Include="widjets\NoFoundData.html" />
+    <Content Include="widjets\schooldata.html" />
     <Content Include="widjets\schoollistrow.html" />
   </ItemGroup>
   <ItemGroup>
@@ -107,12 +113,19 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DistanceFormat.cs" />
-    <Compile Include="GetData.aspx.cs">
-      <DependentUpon>GetData.aspx</DependentUpon>
+    <Compile Include="GetSchoolCoordMapData.aspx.cs">
+      <DependentUpon>GetSchoolCoordMapData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetData.aspx.designer.cs">
-      <DependentUpon>GetData.aspx</DependentUpon>
+    <Compile Include="GetSchoolCoordMapData.aspx.designer.cs">
+      <DependentUpon>GetSchoolCoordMapData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetJSProxy.aspx.cs">
+      <DependentUpon>GetJSProxy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetJSProxy.aspx.designer.cs">
+      <DependentUpon>GetJSProxy.aspx</DependentUpon>
     </Compile>
     <Compile Include="GetSchoolAddressData.aspx.cs">
       <DependentUpon>GetSchoolAddressData.aspx</DependentUpon>
@@ -120,6 +133,20 @@
     </Compile>
     <Compile Include="GetSchoolAddressData.aspx.designer.cs">
       <DependentUpon>GetSchoolAddressData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSchoolData.aspx.cs">
+      <DependentUpon>GetSchoolData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetSchoolData.aspx.designer.cs">
+      <DependentUpon>GetSchoolData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSchoolMapData.aspx.cs">
+      <DependentUpon>GetSchoolMapData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetSchoolMapData.aspx.designer.cs">
+      <DependentUpon>GetSchoolMapData.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,7 +172,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\Web.config" />
+    <None Include="Properties\PublishProfiles\bcwddata - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\bcwddata - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <Content Include="widjets\schoolmap.html" />
     <Content Include="widjets\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +184,7 @@
       <Name>Geocoding</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

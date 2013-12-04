@@ -1,122 +1,141 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+    <base HREF="http://schoolselector.ru/">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<title>Школы города Омска</title>
-	<meta charset="utf-8" />
+
+    <meta name="keywords" content="Школа, Омск, Рейтинг, School, Omsk, Rating">
+    <meta name="description" content="Сайт предоставляет сервис, для оптимального выбора школы в городе Омске">
+    <meta name="application-name" content="Рейтинг средних общеобразовательных школ в Омске">
+    <meta name="author" Content="BCWD">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
 	<meta name = "viewport" content = "width=device-width, maximum-scale = 1, minimum-scale=1" />
+
 	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" />
-	<link rel="stylesheet" href="css/fixed-navigation.css" type="text/css" />
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+	<link rel="stylesheet" type="text/css" href="css/fixed-navigation.css" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+
 	
-    <script src="js/groups.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://yandex.st/jquery/1.7.2/jquery.min.js" charset="utf-8"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/default.js"></script>
-    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-
-    <script src="cfg/_settings.js"></script>
-    <script src="data/mapdata1.js"></script>
+    <script type="text/javascript" src="cfg/_settings.js"></script>
+    <script type="text/javascript" src="js/groups.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/purl.js"></script>
+	<script type="text/javascript" src="js/default.js"></script>
+    <script type="text/javascript" src="js/spin.min.js"></script>
 
 
 	<script type="text/javascript">
-      var myMap;
-      var isZoom = false;
 
 
-	  function initialize() {
-	      ymaps.ready(initMap);
+	  var defaultSchoolNum = Math.floor(Math.random() * 100 + 1);
+	  var urlSchoolNum = $.url().param('schoolnum');
+	  if (urlSchoolNum != null) {
+	      defaultSchoolNum = urlSchoolNum;
 	  }
 
-	  function getData(attitude, lattitude) {
-
-	      var script = document.createElement('script');
-	      script.type = 'text/javascript';
-	      script.src = baseServiceUrl + '?la=' + attitude + '&lg=' + lattitude;
-	      document.getElementsByTagName('head')[0].appendChild(script);
-
+	  var listAdresses = new Array( "Ленина 1",
+                                    "Маркса 5",
+                                    "Андрианова 17");
+	  var rndAdressPos = Math.floor(Math.random() * listAdresses.length);
+	  var defaultAddress = listAdresses[rndAdressPos];
+	  var urlAddress = $.url().param('address');
+	  if (urlAddress != null) {
+	      defaultAddress = urlAddress;
 	  }
 
-	  function zoomChanger(e) {
-	      if (isZoom) {
-	          myMap.behaviors.disable(['scrollZoom']);
-	          isZoom = false;
-	      } else {
-	          myMap.behaviors.enable(['scrollZoom']);
-	          isZoom = true;
-	      }
-	  }
 
-	  function initMap() {
-	      myMap = new ymaps.Map('map', {
-	          center: [54.977271, 73.38665],
-	          zoom: 11,
-	          type: 'yandex#hybrid',
-	          behaviors: ['default']
-	      });
 
-	      myMap.events.add('click', zoomChanger);
-	      myMap.events.add('dblclick', zoomChanger);
-	      myMap.events.add('contextmenu', zoomChanger);
 
-	      myMap.controls
-                  // Кнопка изменения масштаба.
-                  .add('zoomControl', { left: 5, top: 5 })
-                  // Список типов карты
-                  .add('typeSelector')
-                  // Стандартный набор кнопок
-                  .add('mapTools', { left: 35, top: 5 });
-
-	      var myCollection = loadDataMap();
-          
-	      myCollection.each(function (obj) {
-	          obj.events.add('click', function (e) {
-	              var coords = e.get('coordPosition');
-
-	              getData(coords[0].toPrecision(6), coords[1].toPrecision(6));
-	          });
-
-	      });
-
-	      myMap.geoObjects.add(myCollection);
-
-	  }
-
-	  function callbackSchoolData() {
-	      $("#resultAddress").html(textHtml);
-	  }
+      if ('undefined' != typeof schoolDataProxy) {
+          schoolDataProxy.id = '2FED9B33-6F81-4514-BC79-6D999930F94F';
+      }
 
 
 	  function AddressFindClick() {
 
+	      var spinner = new Spinner().spin();
+	      $('#spinDiv2').html(spinner.el);
+
+	      $('#resultAddress').html('');
+         
 	      var text = $("#addressText").val();
 
+	      if ('undefined' != typeof schoolDataProxy) {
 
-	      var script = document.createElement('script');
-	      script.type = 'text/javascript';
-	      script.src = addresServiceUrl + '?addr=' + encodeURIComponent(text);
-	      script.async = true;
+	          schoolDataProxy.GetAddrData(
+                  text,
+                  1,
+                  function (htmlText) {
+                      $('#spinDiv2').html('');
+                      $('#resultAddress').html(htmlText);
+                  },
+                  function () {
+                      $('#spinDiv2').html('');
+                  });
 
-	      if (script.readyState) {  //IE
-	          script.onreadystatechange = function () {
-	              if (script.readyState == "loaded" ||
-                          script.readyState == "complete") {
-	                  script.onreadystatechange = null;
-	                  callbackSchoolData();
-	              }
-	          };
-	      } else {  //Others
-	          script.onload = function () {
-	              callbackSchoolData();
-	          };
 	      }
 
-	      document.getElementsByTagName('head')[0].appendChild(script);
 	  }
 
+	  function SchoolFindClick() {
 
+	      var spinner = new Spinner().spin();
+	      $('#spinDiv3').html(spinner.el);
+
+	      $('#resultSchoolNum').html('');
+
+	      var text = $("#shoolNumText").val();
+
+	      if ('undefined' != typeof schoolDataProxy) {
+
+	          schoolDataProxy.GetData(
+                  text,
+                  1,
+                  function (htmlText) {
+                      $('#spinDiv3').html('');
+                      $('#resultSchoolNum').html(htmlText);
+                  },
+                  function () {
+                      $('#spinDiv3').html('');
+                  });
+
+	      }
+
+	  }
+
+	  function keyUpProc(event, btnName) {
+
+	      if (typeof event == 'undefined' && window.event) { event = window.event; }
+	      if (event.keyCode == 13) {
+	          document.getElementById(btnName).click();
+	      }
+
+	  }
+
+	  $(document).ready(function () {
+          
+	      if (urlAddress != null) {	          
+	          docRedyClicProc = setInterval(function () {
+	              document.getElementById("addressHref").click();
+	              window.clearInterval(docRedyClicProc);
+	          }, 1000);
+	      } else if (urlSchoolNum != null) {
+	          docRedyClicProc = setInterval(function () {
+	              document.getElementById("schoolnumHref").click();
+	              window.clearInterval(docRedyClicProc);
+	          }, 1000);
+	      }
+          
+	  });
 
 	</script>
 	<!--[if lt IE 9]>
@@ -124,15 +143,17 @@
 		<script src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body onload="initialize()">
+<body>
 	<div id="pagewidth">
 		<header id="header">
 			<div class="center">
 				<nav id="mainNav">
 					<ul>
-						<li class="active"><a href="#mapSection"><span>Карта</span></a></li>
-						<li><a href="#addressSection"><span>Адрес</span></a></li>
-						<li><a href="#schoolSection"><span>Школа</span></a></li>
+						<li><img src="img/omsk.png" alt="Омск" style="vertical-align:middle;"/></li>
+                        <li><h1 class="city_mark">Омск</h1></li>
+                        <li class="active"><a href="#mapSection"><span>Карта</span></a></li>
+						<li><a id="addressHref" href="#addressSection"><span>Адрес</span></a></li>
+						<li><a id="schoolnumHref" href="#schoolSection"><span>Школа</span></a></li>
 						<li><a href="#contactUs"><span>О проекте</span></a></li>
 					</ul>
 				</nav>
@@ -142,26 +163,35 @@
 			
             <section id="mapSection" class="row grey">
 				<div class="center">
-					<div id="map" style="height:750px">
-
+                    
+                    <div class="formRow">
+                        <h2>Рейтинг районов города по уровню школ</h2>
+					</div>
+                    
+					<div id="map" style="height:700px">
 					</div>
 				</div>
+
+
+                <script type="text/javascript">
+
+                    if ('undefined' != typeof schoolDataProxy) {
+
+                        schoolDataProxy.GetMapData(
+                            1,
+                            function (htmlText) {
+                                $('#map').html(htmlText);
+                            });
+
+                    }
+
+                </script>
+
 			</section>
 
 
             <section class="row">
-                <div class="center">
-                    <script type="text/javascript"><!--
-                        google_ad_client = "ca-pub-5444837590420556";
-                        /* 1 */
-                        google_ad_slot = "3276112693";
-                        google_ad_width = 970;
-                        google_ad_height = 90;
-                        //-->
-                    </script>
-                    <script type="text/javascript"
-                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
+                <div id="adBlock1" class="center">
                 </div>
             </section>
 
@@ -169,30 +199,34 @@
 
 			<section id="addressSection" class="row grey">
 				<div class="center">
+                    
                     <div class="formRow">
-    					<strong class="subHeading">Выбор ближайших школ по адресу</strong>
+                        <h2>Выбор ближайших школ по адресу</h2>
                     </div>
 
                     <div class="formRow">
-                        <div class="textField"><input id="addressText" type="text" placeholder="Укажите адрес..." /></div>
+                        <div class="textField"><input id="addressText" type="text" placeholder="Укажите адрес..." onkeyup="keyUpProc(event, 'btnAddressSerch');"/></div>
                     </div>
 
    					<div class="formRow">
-                        <button class="btnSmall btn submit right" onclick="AddressFindClick();">
-    					    <span>Найти</span>
-					    </button>
+                                <div id="spinDiv2" style="float: left; padding:1.75em 1.5em;">
+                                </div>
+
+                                <button id="btnAddressSerch" class="btnSmall btn submit right" onclick="AddressFindClick();">
+    					            <span>Найти</span>
+					            </button>
                     </div>
 
    					<div class="formRow">
 
     	        		<div id="resultAddress" class="center"></div>
 
-                        <script language="JavaScript" type="text/javascript">
+                        <script type="text/javascript">
 
-                            var defaultAddress = "Ленина 1";
                             $("#addressText").val(defaultAddress);
+                            $("#btnAddressSerch").click();
 
-                            AddressFindClick();
+                            //AddressFindClick();
 
                         </script>
 
@@ -203,18 +237,8 @@
 			</section>
 
             <section class="row">
-                <div class="center">
-                    <script type="text/javascript"><!--
-                        google_ad_client = "ca-pub-5444837590420556";
-                        /* 1 */
-                        google_ad_slot = "3276112693";
-                        google_ad_width = 970;
-                        google_ad_height = 90;
-                        //-->
-                    </script>
-                    <script type="text/javascript"
-                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
+                <div id="adBlock2" class="center">
+
                 </div>
             </section>
 
@@ -222,19 +246,40 @@
 
 			<section id="schoolSection" class="row grey">
 				<div class="center">
+                    
                     <div class="formRow">
-    					<strong class="subHeading">Выбор ближайших школ рядом с заданной</strong>
+                        <h2>Информация по номеру школы</h2>
                     </div>
-
+                    
                     <div class="formRow">
-                        <div class="textField"><input type="text" placeholder="Выберите школу ..." /></div>
+                        <div class="textField"><input id="shoolNumText" type="text" placeholder="Выберите школу ..." onkeyup="keyUpProc(event, 'btnSchoolNumSerch');" ></div>
                     </div>
 
    					<div class="formRow">
-                        <button class="btnSmall btn submit right">
+                        <div id="spinDiv3" style="float: left; padding:1.75em 1.5em;">
+                        </div>
+
+                        <button id="btnSchoolNumSerch" class="btnSmall btn submit right" onclick="SchoolFindClick();">
     					    <span>Найти</span>
 					    </button>
                     </div>
+
+
+   					<div class="formRow">
+
+    	        		<div id="resultSchoolNum" class="center"></div>
+
+                        <script type="text/javascript">
+
+                            $("#shoolNumText").val(defaultSchoolNum);
+                            $("#btnSchoolNumSerch").click();
+
+                            //SchoolFindClick();
+
+                        </script>
+
+                    </div>
+
 
 				</div>
 
@@ -242,7 +287,8 @@
 
 
             <section class="row">
-                <div class="center">
+                <div id="adBlock3" class="center">
+
                     <script type="text/javascript"><!--
                         google_ad_client = "ca-pub-5444837590420556";
                         /* 1 */
@@ -254,6 +300,7 @@
                     <script type="text/javascript"
                     src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                     </script>
+
                 </div>
             </section>
 
@@ -280,9 +327,71 @@
 		</div>
 
 		<footer id="footer">
+            
 			<div class="center">
-				<span class="copy">Created by BCWD© 2013</span>
+                <div class="share42init share-block"></div>
+                <script type="text/javascript" src="social/share42.js"></script>
+
+				<span class="copy">
+                    <!--LiveInternet counter--><script type="text/javascript"><!--
+                    document.write("<a href='http://www.liveinternet.ru/click' " +
+                    "target=_blank><img src='//counter.yadro.ru/hit?t44.6;r" +
+                    escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                    screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                    ";" + Math.random() +
+                    "' alt='' title='LiveInternet' " +
+                    "border='0' width='31' height='31'><\/a>")
+                    //--></script><!--/LiveInternet-->
+                </span>
 			</div>
+
+            <!-- Yandex.Metrika counter -->
+            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                try {
+                    var yaCounter23095822 = new Ya.Metrika({
+                        id: 23095822,
+                        webvisor: false,
+                        clickmap: false,
+                        trackLinks: false,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            </script>
+            <noscript><div><img src="//mc.yandex.ru/watch/23095822" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+
+            <!-- GoogleAnalytics counter -->
+            <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-45919093-1', 'schoolselector.ru');
+                ga('send', 'pageview');
+
+            </script>
+            <!-- /GoogleAnalytics counter -->
+
+            <!-- Rating@Mail.ru counter -->
+            <script type="text/javascript">//<![CDATA[
+                var _tmr = _tmr || [];
+                _tmr.push({ id: "2428565", type: "pageView", start: (new Date()).getTime() });
+                (function (d, w) {
+                    var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+                    ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+                    var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+                    if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+                })(document, window);
+                //]]></script><noscript><div style="position:absolute;left:-10000px;">
+            <img src="//top-fwz1.mail.ru/counter?id=2428565;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+            </div></noscript>
+            <!-- //Rating@Mail.ru counter -->
+
 		</footer>
 	</div>
 

@@ -11,7 +11,7 @@ namespace BL
 {
 
 
-    public partial class GetData
+    public partial class GetSchoolData
     {
 
         /// <summary>

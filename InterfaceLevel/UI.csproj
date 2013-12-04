@@ -46,8 +46,7 @@
     <Content Include="css\default.css" />
     <Content Include="css\fixed-navigation.css" />
     <Content Include="css\flexslider.css" />
-    <Content Include="data\mapdata1.js" />
-    <Content Include="data\mapdata1_omsk.js" />
+    <Content Include="favicon.ico" />
     <Content Include="img\bullet-white.gif" />
     <Content Include="img\bullet.gif" />
     <Content Include="img\content01.jpg" />
@@ -57,6 +56,9 @@
     <Content Include="img\content05.jpg" />
     <Content Include="img\gallerControls.png" />
     <Content Include="img\galleryControls.png" />
+    <Content Include="img\omsk.jpg" />
+    <Content Include="img\omsk.png" />
+    <Content Include="social\icons.png" />
     <Content Include="img\img-gallery.jpg" />
     <Content Include="img\img-gallery2.jpg" />
     <Content Include="img\img-gallery3.jpg" />
@@ -74,7 +76,12 @@
     <Content Include="js\groups.js" />
     <Content Include="js\jquery.flexslider.js" />
     <Content Include="js\LICENSE-flexSlider.txt" />
+    <Content Include="js\purl.js" />
     <Content Include="js\respond.min.js" />
+    <Content Include="social\share42.js" />
+    <Content Include="js\spin.min.js" />
+    <Content Include="Robots.txt" />
+    <Content Include="wmail_62f892fbf5e11153.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

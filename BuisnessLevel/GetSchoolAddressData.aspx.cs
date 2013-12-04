@@ -42,15 +42,25 @@ namespace BL
             string ret = string.Empty;
             string[] allKeys = par.AllKeys;
 
-            if (allKeys.Contains("addr"))
+            if (allKeys.Contains("addr") && 
+                allKeys.Contains("userid") &&
+                allKeys.Contains("callback") &&
+                allKeys.Contains("cssreg") )
             {
-                ret = Global.widgetNotFoundAddress;
+                ret = Global.widgetNotFoundData;
                 string addr = HttpUtility.UrlDecode(par["addr"]).Trim();
+                string cssreg = HttpUtility.UrlDecode(par["cssreg"]).Trim();
 
                 if (!string.IsNullOrWhiteSpace(addr)  && (1 < addr.Split(' ').Count()))
                 {
                     GeoMatching gm = new GeoMatching();
-                    Coordinates cc = gm.GetCoordinates("Омск " + addr);
+
+                    if (!addr.StartsWith("омск", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        addr = addr.Insert(0, "Омск ");
+                    }
+
+                    Coordinates cc = gm.GetCoordinates(addr);
 
                     if (null != cc)
                     {
@@ -91,15 +101,25 @@ namespace BL
                             GenerateWidgetRow(ref tableBody, Global.patternWidjetRow, sd, item.Value.Item1, rd);
                         }
 
+                        if ("0" == cssreg)
+                        {
+                            ret = string.Empty;
+                        }
+                        else
+                        {
+                            ret = Global.patternWidjetStyle;
+                        }
 
-                        ret = Global.patternWidjetStyle + Global.patternWidjetBody.Replace(Global.patternWidjetRow, tableBody);
-                        ret = ret.Replace(Global.rowStart, string.Empty);
-                        ret = ret.Replace(Global.rowEnd, string.Empty);
+                        ret += Global.patternWidjetBody.Replace(Global.rowStart, string.Empty)
+                                                       .Replace(Global.rowEnd, string.Empty)
+                                                       .Replace(Global.patternWidjetRow, tableBody);
                     }
                 }
 
                 ret = ret.Replace(Environment.NewLine, string.Empty);
-                ret = string.Concat("var textHtml = '", ret, "';");
+
+                string callBackName = par["callback"];
+                ret = string.Concat(callBackName, ".Callback('", ret, "');");
             }
 
             return ret;
@@ -110,6 +130,9 @@ namespace BL
             string row = pattern;
 
             row = row.Replace("{school_num}", sd.school.ToString());
+
+            string adr = string.Concat("ул. ", sd.street, " д.", sd.buildNum);
+            row = row.Replace("{address}", adr);
 
             row = row.Replace("{distance}", distance.HasValue ? DistanceFormat.InKiloMeters(distance.Value) : string.Empty);
 
@@ -122,49 +145,25 @@ namespace BL
                 string ratingStyle = string.Empty;
                 switch (rd.egCommonState)
                 {
-                    case "Средний": { ratingStyle = "middle_level"; break; }
-                    case "Ниже среднего": { ratingStyle = "low_middle_level"; break; }
-                    case "Выше среднего": { ratingStyle = "high_middle_level"; break; }
-                    case "Самый высокий": { ratingStyle = "high_level"; break; }
-                    case "Самый низкий": { ratingStyle = "low_level"; break; }
+                    case "Средний": { ratingStyle = "schoollist_item_data_middle_level"; break; }
+                    case "Ниже среднего": { ratingStyle = "schoollist_item_data_low_middle_level"; break; }
+                    case "Выше среднего": { ratingStyle = "schoollist_item_data_high_middle_level"; break; }
+                    case "Самый высокий": { ratingStyle = "schoollist_item_data_high_level"; break; }
+                    case "Самый низкий": { ratingStyle = "schoollist_item_data_low_level"; break; }
                 }
                 row = row.Replace("{common_raiting_level_style}", ratingStyle);
 
-
-                EnableBlock(ref row, "RAITING DATA");
-                DisableBlock(ref row, "NORAITING DATA");
+                Global.EnableBlock(ref row, "RAITING DATA");
+                Global.DisableBlock(ref row, "NORAITING DATA");
             }
             else
             {
-                EnableBlock(ref row, "NORAITING DATA");
-                DisableBlock(ref row, "RAITING DATA");
+                Global.EnableBlock(ref row, "NORAITING DATA");
+                Global.DisableBlock(ref row, "RAITING DATA");
             }
 
             ret = ret + row;
         }
-
-        private void DisableBlock(ref string ret, string nameBlock)
-        {
-            int pozStart = ret.IndexOf("<!-- " + nameBlock);
-            int pozEnd = ret.IndexOf(nameBlock + " -->", pozStart);
-
-            string blk = ret.Substring(pozStart, pozEnd + nameBlock.Length + " -->".Length - pozStart);
-            ret = ret.Replace(blk, string.Empty);
-        }
-
-        private void EnableBlock(ref string ret, string nameBlock)
-        {
-            int pozStart = ret.IndexOf("<!-- " + nameBlock);
-            int pozEnd = ret.IndexOf(nameBlock + " -->", pozStart);
-
-            string blk = ret.Substring(pozStart, pozEnd + nameBlock.Length + " -->".Length - pozStart);
-            string oldBlk = blk;
-            blk = blk.Replace("<!-- " + nameBlock, string.Empty);
-            blk = blk.Replace(nameBlock + " -->", string.Empty);
-
-            ret = ret.Replace(oldBlk, blk);
-        }
-
 
     }
 }
