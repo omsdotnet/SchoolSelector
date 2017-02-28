@@ -53,7 +53,7 @@ namespace BL
         {
             // Не стартуем пока ПОЛНОСТЬЮ не подготовим все данные !!!
             
-            wfFacade = new Facade();
+            // wfFacade = new Facade();
 
             string line;
             JavaScriptSerializer js = new JavaScriptSerializer();
