@@ -1,0 +1,18 @@
+{ school: "95", egCommonRating: "56.3", egCommomLevel: "1", egCommonState: "Выше среднего" }
+
+
+{ street: "4-я Любинская", buildNum: "43 корпус 1", attitude:"55.1064831835326", longtitude: "73.140428158639",  school: "95"}
+
+
+
+
+
+
+
+
+
+{ school: "95", name: "Средняя общеобразовательная школа с углубленным изучением отдельных предметов №95" }
+
+
+
+{ school: "95", imageUrl: "http://moy33.omskedu.ru/files/2012/fkuf04/Рисунок1.jpg" }
