@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\SkyDrive\School\Project\InterfaceLevel\obj\Test\Package\PackageTmp" />
+  <setAcl path="D:\SkyDrive\School\Project\InterfaceLevel\obj\Test\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="D:\SkyDrive\School\Project\InterfaceLevel\obj\Test\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
