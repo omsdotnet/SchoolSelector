@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weather>
+  <location type="p" id="4578" nameRU="Омск" nameEN="Omsk" latitude="54" longitude="73">
+    <forecast valid="2014-02-03T16:00:00" tod="2">
+      <values t="-22" p="1027" ws="3" wd="196" hum="74" hi="-27" cl="6" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-03T22:00:00" tod="3">
+      <values t="-26" p="1026" ws="3" wd="191" hum="81" hi="-31" cl="17" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-04T04:00:00" tod="0">
+      <values t="-28" p="1024" ws="3" wd="187" hum="81" hi="-33" cl="13" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-04T10:00:00" tod="1">
+      <values t="-28" p="1023" ws="3" wd="169" hum="79" hi="-34" cl="18" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-04T16:00:00" tod="2">
+      <values t="-23" p="1021" ws="3" wd="154" hum="71" hi="-28" cl="4" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-04T22:00:00" tod="3">
+      <values t="-27" p="1021" ws="4" wd="150" hum="79" hi="-33" cl="22" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-05T04:00:00" tod="0">
+      <values t="-29" p="1020" ws="3" wd="142" hum="80" hi="-35" cl="4" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-05T10:00:00" tod="1">
+      <values t="-31" p="1021" ws="4" wd="152" hum="80" hi="-38" cl="2" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-05T16:00:00" tod="2">
+      <values t="-24" p="1022" ws="3" wd="157" hum="72" hi="-29" cl="39" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-05T22:00:00" tod="3">
+      <values t="-26" p="1024" ws="3" wd="162" hum="79" hi="-32" cl="29" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-06T04:00:00" tod="0">
+      <values t="-26" p="1025" ws="3" wd="156" hum="81" hi="-32" cl="72" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-06T10:00:00" tod="1">
+      <values t="-25" p="1026" ws="3" wd="151" hum="79" hi="-30" cl="94" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-06T16:00:00" tod="2">
+      <values t="-20" p="1026" ws="4" wd="148" hum="71" hi="-25" cl="83" pt="2" pr="0.1" />
+    </forecast>
+    <forecast valid="2014-02-06T22:00:00" tod="3">
+      <values t="-22" p="1026" ws="3" wd="133" hum="77" hi="-27" cl="99" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-07T04:00:00" tod="0">
+      <values t="-22" p="1025" ws="2" wd="122" hum="79" hi="-26" cl="99" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-07T10:00:00" tod="1">
+      <values t="-24" p="1025" ws="3" wd="107" hum="81" hi="-29" cl="89" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-07T16:00:00" tod="2">
+      <values t="-18" p="1024" ws="3" wd="87" hum="72" hi="-23" cl="0" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-07T22:00:00" tod="3">
+      <values t="-23" p="1023" ws="4" wd="82" hum="79" hi="-29" cl="1" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-08T04:00:00" tod="0">
+      <values t="-25" p="1022" ws="3" wd="68" hum="82" hi="-30" cl="84" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-08T10:00:00" tod="1">
+      <values t="-26" p="1021" ws="2" wd="73" hum="84" hi="-30" cl="10" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-08T16:00:00" tod="2">
+      <values t="-21" p="1020" ws="0" wd="247" hum="73" hi="-21" cl="0" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-08T22:00:00" tod="3">
+      <values t="-24" p="1020" ws="2" wd="198" hum="78" hi="-27" cl="0" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-09T04:00:00" tod="0">
+      <values t="-28" p="1020" ws="4" wd="190" hum="83" hi="-35" cl="7" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-09T10:00:00" tod="1">
+      <values t="-25" p="1019" ws="4" wd="182" hum="79" hi="-32" cl="36" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-09T16:00:00" tod="2">
+      <values t="-20" p="1018" ws="3" wd="180" hum="74" hi="-25" cl="77" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-09T22:00:00" tod="3">
+      <values t="-17" p="1018" ws="3" wd="194" hum="77" hi="-20" cl="95" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-10T04:00:00" tod="0">
+      <values t="-16" p="1018" ws="3" wd="219" hum="80" hi="-20" cl="83" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-10T10:00:00" tod="1">
+      <values t="-15" p="1018" ws="4" wd="232" hum="77" hi="-19" cl="51" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-10T16:00:00" tod="2">
+      <values t="-15" p="1019" ws="4" wd="221" hum="75" hi="-20" cl="17" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-10T22:00:00" tod="3">
+      <values t="-16" p="1020" ws="4" wd="215" hum="77" hi="-21" cl="32" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-11T04:00:00" tod="0">
+      <values t="-17" p="1020" ws="4" wd="223" hum="80" hi="-21" cl="60" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-11T10:00:00" tod="1">
+      <values t="-15" p="1020" ws="3" wd="218" hum="81" hi="-20" cl="78" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-11T16:00:00" tod="2">
+      <values t="-12" p="1020" ws="4" wd="204" hum="81" hi="-16" cl="87" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-11T22:00:00" tod="3">
+      <values t="-11" p="1020" ws="3" wd="196" hum="80" hi="-15" cl="89" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-12T04:00:00" tod="0">
+      <values t="-13" p="1019" ws="3" wd="201" hum="82" hi="-17" cl="57" pt="2" pr="0.0" />
+    </forecast>
+    <forecast valid="2014-02-12T10:00:00" tod="1">
+      <values t="-12" p="1019" ws="4" wd="201" hum="80" hi="-17" cl="54" pt="0" />
+    </forecast>
+    <forecast valid="2014-02-12T16:00:00" tod="2">
+      <values t="-10" p="1018" ws="3" wd="193" hum="78" hi="-14" cl="82" pt="0" />
+    </forecast>
+  </location>
+</weather>

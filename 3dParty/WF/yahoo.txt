@@ -1,0 +1,9 @@
+﻿Current Conditions:
+Smoke, -23 C
+
+Forecast:
+Thu - Cloudy. High: -19 Low: -25
+Fri - Cloudy. High: -18 Low: -24
+Sat - Cloudy. High: -19 Low: -27
+Sun - Mostly Cloudy. High: -18 Low: -29
+Mon - Partly Cloudy. High: -18 Low: -27

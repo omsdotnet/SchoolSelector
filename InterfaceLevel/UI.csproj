@@ -47,40 +47,24 @@
     <Content Include="css\fixed-navigation.css" />
     <Content Include="css\flexslider.css" />
     <Content Include="favicon.ico" />
-    <Content Include="img\bullet-white.gif" />
-    <Content Include="img\bullet.gif" />
-    <Content Include="img\content01.jpg" />
-    <Content Include="img\content02.jpg" />
-    <Content Include="img\content03.jpg" />
-    <Content Include="img\content04.jpg" />
-    <Content Include="img\content05.jpg" />
-    <Content Include="img\gallerControls.png" />
-    <Content Include="img\galleryControls.png" />
-    <Content Include="img\omsk.jpg" />
     <Content Include="img\omsk.png" />
+    <Content Include="OlympicFrames.html" />
+    <Content Include="Olympic.html" />
     <Content Include="social\icons.png" />
-    <Content Include="img\img-gallery.jpg" />
-    <Content Include="img\img-gallery2.jpg" />
-    <Content Include="img\img-gallery3.jpg" />
-    <Content Include="img\img-news01.jpg" />
-    <Content Include="img\img-news02.jpg" />
-    <Content Include="img\img-news03.jpg" />
-    <Content Include="img\map.jpg" />
-    <Content Include="img\quotes.png" />
     <Content Include="img\sep-hor.gif" />
     <Content Include="img\sep-vert.gif" />
     <Content Include="index.html" />
-    <Content Include="index_2.html" />
+    <Content Include="indexOriginal.html" />
     <Content Include="js\default.js" />
     <Content Include="js\es5-shim.js" />
     <Content Include="js\groups.js" />
     <Content Include="js\jquery.flexslider.js" />
-    <Content Include="js\LICENSE-flexSlider.txt" />
     <Content Include="js\purl.js" />
     <Content Include="js\respond.min.js" />
     <Content Include="social\share42.js" />
     <Content Include="js\spin.min.js" />
     <Content Include="Robots.txt" />
+    <Content Include="Weather.html" />
     <Content Include="wmail_62f892fbf5e11153.html" />
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +73,16 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\schoolselector - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\schoolselector - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Test.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts\" />

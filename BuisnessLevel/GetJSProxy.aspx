@@ -9,6 +9,16 @@ function ProxyJsonpExecutor(callbackFunctionExec) {
         this.isExecuted = true;
         this.userFunction(data);
     }
+
+    this.CallbackWithScript = function (data, scriptTxt) {
+
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.text = scriptTxt;
+        document.getElementsByTagName('head')[0].appendChild(script);
+
+        this.Callback(data);
+    }
 }
 
 
@@ -139,6 +149,18 @@ function ProxyJsonp() {
 	      document.getElementsByTagName("head")[0].appendChild(script);
     }
 
+
+    this.GetOlympicData = function (regimCss, callbackSuccess, callbackError) {
+        this.executeServerMethod('Olympic', '', regimCss, callbackSuccess, callbackError);
+    }
+
+    this.GetWeatherNow = function (regimCss, callbackSuccess, callbackError) {
+        this.executeServerMethod('GetWF', '', regimCss, callbackSuccess, callbackError);
+    }
+
+    this.GetWeatherForecast = function (regimCss, callbackSuccess, callbackError) {
+        this.executeServerMethod('GetWFForecast', '', regimCss, callbackSuccess, callbackError);
+    }
 
 }
 

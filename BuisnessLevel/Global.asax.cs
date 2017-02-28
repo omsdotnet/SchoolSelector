@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Web.Script.Serialization;
 using BL.objects;
 using System.Device.Location;
+using WFProc;
 
 namespace BL
 {
@@ -35,10 +36,25 @@ namespace BL
         public static string patternWidjetSchoolMap = string.Empty;
 
 
+        public static string patternOlympicWidjet = string.Empty;
+        public static string patternOlympicWidjetStyle = string.Empty;
+        public static string patternOlympicWidjetBody = string.Empty;
+
+        public static string patternOlympicWidjetFarmes;
+
+
+        public static string patternWFWidjet = string.Empty;
+        public static string patternWFWidjetStyle = string.Empty;
+        public static string patternWFWidjetBody = string.Empty;
+
+        public static Facade wfFacade = null;
+
         protected void Application_Start(object sender, EventArgs e)
         {
             // Не стартуем пока ПОЛНОСТЬЮ не подготовим все данные !!!
             
+            wfFacade = new Facade();
+
             string line;
             JavaScriptSerializer js = new JavaScriptSerializer();
             
@@ -81,7 +97,20 @@ namespace BL
             patternWidjetSchoolDataBody = getWidgetBody(patternWidjetSchoolData);
 
 
-            patternWidjetSchoolMap = File.ReadAllText(Server.MapPath("~\\widjets\\schoolmap.html"));        
+            patternWidjetSchoolMap = File.ReadAllText(Server.MapPath("~\\widjets\\schoolmap.html"));
+
+
+            patternOlympicWidjet = File.ReadAllText(Server.MapPath("~\\widjets\\olympic.html"));
+            patternOlympicWidjetStyle = getWidgetStyle(patternOlympicWidjet);
+            patternOlympicWidjetBody = getWidgetBody(patternOlympicWidjet);
+
+            patternOlympicWidjetFarmes = File.ReadAllText(Server.MapPath("~\\widjets\\olympicFrames.html"));
+
+
+            patternWFWidjet = File.ReadAllText(Server.MapPath("~\\widjets\\WF.html"));
+            patternWFWidjetStyle = getWidgetStyle(patternWFWidjet);
+            patternWFWidjetBody = getWidgetBody(patternWFWidjet);
+        
         }
 
         private string getWidgetStyle(string widgetPattern)

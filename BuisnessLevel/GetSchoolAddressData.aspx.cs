@@ -134,7 +134,13 @@ namespace BL
             string adr = string.Concat("ул. ", sd.street, " д.", sd.buildNum);
             row = row.Replace("{address}", adr);
 
-            row = row.Replace("{distance}", distance.HasValue ? DistanceFormat.InKiloMeters(distance.Value) : string.Empty);
+            string distStr = string.Empty;
+            if ((distance.HasValue) && (40 < distance.Value))
+            {
+                distStr = string.Concat("Расстояние:<br/>", DistanceFormat.InKiloMeters(distance.Value));                
+            }
+            row = row.Replace("{distance}", distStr);
+           
 
             if (null != rd)
             {

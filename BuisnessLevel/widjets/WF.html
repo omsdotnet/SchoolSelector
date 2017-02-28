@@ -1,0 +1,292 @@
+﻿<!-- STYLES START -->
+
+
+    <style type="text/css">
+        .DOWStyleWorking { font-family: Arial; font-size: 14px; }
+        .DOWStyleHoliday { font-family: Arial; font-size: 14px; color : Red; }
+        .DDStyleWorking { font-family: Arial; font-size: 48px; font-weight: bold; }
+        .DDStyleHoliday { font-family: Arial; font-size: 48px; font-weight: bold; color : Red; }
+    </style>
+<!-- STYLES END -->
+
+    <script type = "text/javascript">
+        function ProcBlock(Buf, bufImgDownPatch, bufImgUpPatch) {
+            var listCol = $("[detail=block_Collapse]");
+            var listDet = $("[detail=block_Detail]");
+
+            for (var i = 0; i < listDet.length; i++) {
+                var myElementCol = listCol[i];
+                var myElementDet = listDet[i];
+
+                var imgBuf = null;
+
+                var imgList = $("#arr_select", myElementCol);
+                if (imgList.size() > 0)
+                    imgBuf = imgList[0];
+
+
+                if (Buf.id == myElementCol.id) {
+
+                    if (myElementDet.style.display == "table-row") {
+                        myElementDet.style.display = "none";
+                        myElementDet.style.height = 0;
+
+                        if (imgBuf != null)
+                            imgBuf.src = bufImgDownPatch;
+                    }
+                    else {
+                        myElementDet.style.display = "table-row";
+                        myElementDet.style.height = "auto";
+
+                        if (imgBuf != null)
+                            imgBuf.src = bufImgUpPatch;
+                    }
+                }
+                else {
+                    myElementDet.style.display = "none";
+                    myElementDet.style.height = 0;
+
+                    if (imgBuf != null)
+                        imgBuf.src = bufImgDownPatch;
+                }
+
+            }
+        }
+    </script>
+
+
+
+
+        <!--<ItemTemplate>-->
+        
+        <table>
+            <tr>
+                <td>
+                    <h1>
+                        <span class="w_caption" style="padding-left: 25px;">Погода в Омске</span>
+                    </h1>
+                </td>
+                <td>
+                   <%# Eval("nowDTDetail")%> 
+                </td>
+            </tr>
+        </table>
+        <br />
+        <div id="divNowInOmsk" style="margin-left: 25px">
+            <table style="width: 710px">
+                <tr>
+                    <td style="width: 106px;">
+                        <img id="image1" src='<%# Eval("WheatherImg") %>' alt = ''
+                            style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                    </td>
+                    <td style="width: 220px;">
+                        <span style="font: 48px Arial;"><%# Eval("TemperatureDetail")%></span><br />
+                    </td>
+                    <td style="width: 220px;">
+                        <span style="font: 12px Arial;"><%# Eval("CloudinessDetail")%> <%# Eval("Precipitation")%></span><br />
+                        <span style="font: 12px Arial;"><%# Eval("AtmospherePressureDetail")%></span><br />
+                        <span style="font: 12px Arial;"><%# Eval("HumidityDetail")%></span><br />
+                        <span style="font: 12px Arial;"><%# Eval("WindSpeedDetail")%></span><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--</ItemTemplate>-->
+
+        <!--<LayoutTemplate>-->
+            <h1>
+                <span class="w_caption" style="padding-left: 25px;">Прогноз на 10 суток</span>
+            </h1>
+            <br />
+            <table style="width: 750px;" cellpadding="0px" cellspacing="0px">
+                <tr style="font-family: Arial; font-size: 11px; color: Gray;">
+                    <td style="height: 60px; width: 80px; vertical-align: middle;" valign="middle" align="center">
+                    </td>
+                    <td style="text-align: center; height: 60px; width: 200px; vertical-align: middle;"
+                            valign="middle" align="center">
+                        Характеристики погоды,<br />
+                        атмосферные явления
+                    </td>
+                    <td style="text-align: center; height: 60px; width: 110px; vertical-align: middle;"
+                            valign="middle" align="center">
+                        Tемпература<br />
+                        воздуха
+                    </td>
+                    <td style="text-align: center; height: 60px; margin-left: 19px; width: 80px; vertical-align: middle;"
+                            valign="middle" align="center">
+                        Атмосферное<br />
+                        давление,<br />
+                        мм рт.ст.
+                    </td>
+                    <td style="text-align: center; height: 60px; width: 80px; vertical-align: middle;"
+                            valign="middle" align="center">
+                        Влажность<br />
+                        воздуха
+                    </td>
+                    <td style="text-align: center; height: 60px; width: 80px; vertical-align: middle;"
+                            valign="middle" align="center">
+                        Скорость<br />
+                        и направление<br />
+                        ветра
+                    </td>
+                    <td style="text-align: center; height: 60px; width: 80px; vertical-align: middle;"
+                            valign="middle" align="center">
+                        Комфорт
+                    </td>
+                </tr>
+                
+               <div id="itemPlaceHolder" runat="server"></div>
+                    
+            </table>
+
+        <!--</LayoutTemplate>-->
+        <!--<ItemTemplate>-->
+            <tr runat="server" id="divCollapse" detail="block_Collapse" onclick='<%# "ProcBlock(this, \"" + Eval("imgArrowDown") + "\", \"" + Eval("imgArrowUp") + "\");" %>'
+                onmouseover="this.style.backgroundColor = '#A8D0EC';" onmouseout="this.style.backgroundColor = '#E0F0FF';"
+                style="font-size: 13px; text-align: center; background-color: #E0F0FF; vertical-align: middle;" valign="middle">
+
+                <td style="width: 80px; background: White; vertical-align: middle;" valign="middle"
+                    align="center">
+                    <table style="padding-top: 5px; margin-right: 10px;">
+                        <tr>
+                            <td style="vertical-align: top; padding-top: 8px;">
+                                <span class='<%# Eval("dtoDOWStyle") %>'><%# Eval("dtoDOW") %></span>
+                            </td>
+                            <td>
+                                <span class='<%# Eval("dtoDDStyle") %>'><%# Eval("dtoDD") %></span><br />
+                                <span style="font: 14px Arial;"><%# Eval("dtoMonth") %></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td style="width: 200px; vertical-align: middle;" valign="middle" align="center">
+                    <table>
+                        <tr>
+                            <td>
+                                <img id="Img1" src='<%# Eval("WheatherImg") %>' alt = ''
+                                    style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                            </td>
+                            <td>                                           
+                                <span style="font: 12px Arial;"><%# Eval("Cloudiness") %></span><br />
+                                <span style="font: 12px Arial;"><%# Eval("Precipitation") %></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 110px; vertical-align: middle;" valign="middle" align="center">
+                    <table cellspacing="0px" cellpadding="0px" width="100px">
+                        <tr style="background-color: #C7E4FF; height: 35px;">
+                            <td style="width: 40%">
+                                <img id="Img2" src='<%# Eval("imgPartNight") %>' alt = ''
+                                    style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                            </td>
+                            <td style="font-size: 22px; color: #3D72BB; text-align: left;">
+                                <%# Eval("temperatureNight") %>
+                            </td>
+                        </tr>
+                        <tr style="background-color: White; height: 35px;">
+                            <td style="width: 40%">
+                                <img id="Img3" src='<%# Eval("imgPartDay") %>' alt = ''
+                                    style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                            </td>
+                            <td style="font-size: 22px; color: #3D72BB; text-align: left;">
+                                <%# Eval("temperatureDay") %>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 80px; vertical-align: middle;" valign="middle" align="center">
+                    <span style="font: normal 14px Arial;"><%# Eval("AtmospherePressure") %></span>
+                </td>
+                <td style="width: 80px; vertical-align: middle;" valign="middle" align="center">
+                    <span style="font: normal 14px Arial;"><%# Eval("Humidity") %></span>
+                </td>
+                <td style="width: 80px; vertical-align: middle;" valign="middle" align="center">
+                    <span style="font: normal 14px Arial;"><%# Eval("WindSpeed") %></span>
+                    <img id="Img4" src='<%# Eval("windDirectionImg") %>' alt = ''
+                        style="vertical-align: middle; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                </td>
+                <td style="width:80px; vertical-align: middle;" valign="middle" align="center">
+                    <span style="font: normal 14px Arial;"><%# Eval("Comfort") %></span>
+                </td>
+                <td style="width:60px; vertical-align: middle;" valign="middle" align="center">
+                    <img id="arr_select" src='<%# Eval("imgArrowDown") %>' alt = ''
+                        style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                </td>
+            </tr>
+
+            <tr id="divDetail" detail="block_Detail" style="display: none; width:100%;">
+            <td colspan="8">
+
+                        <!--<LayoutTemplate>-->
+                            <span class="ui_form_data" id="itemPlaceHolderDet" runat="server">
+                            </span>
+                        <!--</LayoutTemplate>-->
+
+                        <!--<ItemTemplate>-->
+
+                            <table style="text-align: center;" cellpadding="0px" cellspacing="0px">
+                                <tr style="font-family: Arial; font-size: 13px; text-align: center; height: 40px">
+                                    <td style="width: 110px; height: 60px; background-color: White; color: Gray; vertical-align: middle;"
+                                            valign="middle" align="center">
+                                            <span style="font-family: Arial; font-size: 14px;"><%# Eval("namePartDay") %></span>
+                                    </td>
+                                    <td style="width: 160px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;
+                                            vertical-align: middle;" valign="middle" align="center">
+                                        <table style="text-align: left;">
+                                            <tr>
+                                                <td style="height: 36px; width: 50%; vertical-align: middle; text-align:center;">
+                                                    <img id="ImgDet1" src='<%# Eval("WheatherImg") %>' alt = ''
+                                                        style="vertical-align: middle; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                                                </td>
+                                                <td style="height: 36px; width: 50%">
+                                                    <span style="font-family: Arial; font-size: 12px;"><%# Eval("Cloudiness") %></span><br />
+                                                    <span style="font-family: Arial; font-size: 12px;"><%# Eval("Precipitation") %></span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="width: 80px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;
+                                            vertical-align: middle;" valign="middle" align="center">
+                                        <%# Eval("Temperature") %>
+                                    </td>
+                                    <td style="width: 110px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;
+                                            vertical-align: middle;" valign="middle" align="center">
+                                        <span style="font: normal 14px Arial;"><%# Eval("AtmospherePressure") %></span>
+                                    </td>
+                                    <td style="width: 80px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;
+                                            vertical-align: middle;" valign="middle" align="center">
+                                        <span style="font: normal 14px Arial;"><%# Eval("Humidity") %></span>
+                                    </td>
+                                    <td style="width: 80px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;
+                                            vertical-align: middle;" valign="middle" align="center">
+                                        <span style="font: normal 14px Arial;"><%# Eval("WindSpeed") %></span>
+                                        <img id="ImgDet2" src='<%# Eval("windDirectionImg") %>' alt = ''
+                                            style="vertical-align: middle; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" />
+                                    </td>
+                                    <td style="width: 80px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;
+                                            vertical-align: middle;" valign="middle" align="center">
+                                        <span style="font: normal 14px Arial;"><%# Eval("Comfort") %></span>
+                                    </td>
+                                    <td style="width: 55px; height: 60px; background-color: #F1F8FF; border-bottom: solid 2px #E0F0FF;">
+                                    </td>
+                                </tr>
+                            </table>
+
+                        <!--</ItemTemplate>-->
+
+                </td>
+                </tr>
+           
+        <!--</ItemTemplate>-->
+
+    
+     <div runat="server" id="divByWho" style="text-align: center; color: Gray; font: 13px Arial;
+        width: 710px; margin-left: 20px; margin-top: 30px;">
+        Данные предоставлены Gismeteo.ru
+    </div>
+
+</body>
+</html>

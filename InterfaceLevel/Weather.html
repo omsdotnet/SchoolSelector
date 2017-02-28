@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript" src="http://yandex.st/jquery/1.7.2/jquery.min.js" charset="utf-8"></script>
+    
+    <script type="text/javascript" src="cfg/_settings.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            if ('undefined' != typeof schoolDataProxy) {
+
+                schoolDataProxy.GetWeatherNow(
+                    1,
+                    function (htmlText) {
+                        $('#weather_frame_now').html(htmlText);
+                    },
+                    function () {
+                    });
+
+
+                schoolDataProxy.GetWeatherForecast(
+                    1,
+                    function (htmlText) {
+                        $('#weather_frame_forecast').html(htmlText);
+                    },
+                    function () {
+                    });
+
+
+            }
+
+        });
+
+	</script>
+
+    <style>
+        .main_div{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Сейчас в Омске</h1>
+    <div id="weather_frame_now" class="main_div">
+    </div>
+    
+    
+    <h1>Погода в Омске, прогноз на 10 суток</h1>
+    <div id="weather_frame_forecast" class="main_div">
+    </div>
+
+</body>
+</html>

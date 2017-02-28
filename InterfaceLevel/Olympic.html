@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <script type="text/javascript" src="http://yandex.st/jquery/1.7.2/jquery.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="cfg/_settings.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+          
+            if ('undefined' != typeof schoolDataProxy) {
+
+                schoolDataProxy.GetOlympicData(
+                    2,
+                    function (htmlText) {
+                        $('#olympic_frame').html(htmlText);
+                    },
+                    function () {
+                    });
+
+            }
+
+        });
+
+	</script>
+
+    <style>
+        .main_div{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="olympic_capt"><h3>Поддержи омичей в Сочи !</h3></div>
+
+    <div id="olympic_frame" class="main_div">
+
+    </div>
+
+</body>
+
+</html>

@@ -116,11 +116,11 @@ namespace BL
                 string ratingStyle = string.Empty;
                 switch (rd.egCommonState)
                 {
-                    case "Средний": { ratingStyle = "schoollist_item_data_middle_level"; break; }
-                    case "Ниже среднего": { ratingStyle = "schoollist_item_data_low_middle_level"; break; }
-                    case "Выше среднего": { ratingStyle = "schoollist_item_data_high_middle_level"; break; }
-                    case "Самый высокий": { ratingStyle = "schoollist_item_data_high_level"; break; }
-                    case "Самый низкий": { ratingStyle = "schoollist_item_data_low_level"; break; }
+                    case "Средний": { ratingStyle = "schooldata_item_data_middle_level"; break; }
+                    case "Ниже среднего": { ratingStyle = "schooldata_item_data_low_middle_level"; break; }
+                    case "Выше среднего": { ratingStyle = "schooldata_item_data_high_middle_level"; break; }
+                    case "Самый высокий": { ratingStyle = "schooldata_item_data_high_level"; break; }
+                    case "Самый низкий": { ratingStyle = "schooldata_item_data_low_level"; break; }
                 }
                 wigetPattern = wigetPattern.Replace("{common_raiting_level_style}", ratingStyle);
 

@@ -1,1 +1,1 @@
-﻿document.write('<script src="http://schoolselector.ru/ah/GetJSProxy.aspx"></script>');
+﻿document.write('<script src="http://polymorpher.azurewebsites.net/GetJSProxy.aspx"></script>');

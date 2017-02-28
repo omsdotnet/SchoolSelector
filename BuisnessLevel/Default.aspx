@@ -48,7 +48,7 @@
     <hr />
     <div class="style1">
         <br />
-        <a href="../">2013 ПК©</a>
+        <a href="../">2013 BCWD ©</a>
     </div>
 
     </div>
