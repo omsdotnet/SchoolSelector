@@ -4,7 +4,7 @@
 
 Районы:
 
-Советский   - https://yandex.ru/maps/?um=constructor%3ACnFttIWMBrV3qcyTrGINli2BCnGm4PoN&source=constructorLink
+Советский   - https://yandex.ru/maps/?um=constructor%3ACnFttIWMBrV3qcyTrGINli2BCnGm4PoN
 
 Октябрьский - https://yandex.ru/maps/?um=constructor%3ATTszDOt_CyuA2uiaIhURi4ZwRxv5OMsQ&source=constructorLink
 
