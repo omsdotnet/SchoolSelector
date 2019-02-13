@@ -1,8 +1,14 @@
 # SchoolSelector
-Школоломер - рейтинг районов города, по уровню образования школ. Уровень образования измеряется по результатам ЕГЭ выпускников, которые те передают в городские ВУЗы.
 
+Школомер - рейтинг микрорайонов города Омска, по уровню образования школ. Уровень образования измеряется по результатам ЕГЭ выпускников, которые те передают в городские ВУЗы.
 
-Районы:
+# Production: http://schoolselector.azurewebsites.net
+
+# Project Promo:
+
+![1](https://github.com/omsdotnet/SchoolSelector/blob/master/Materials/image_gallery.png?raw=true)
+
+# Районы:
 
 Октябрьский - https://yandex.ru/maps/?um=constructor%3ATTszDOt_CyuA2uiaIhURi4ZwRxv5OMsQ
 
